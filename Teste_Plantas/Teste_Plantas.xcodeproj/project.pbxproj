@@ -12,6 +12,10 @@
 		A7413F9929CE15790012CBCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7413F9829CE15790012CBCD /* Assets.xcassets */; };
 		A7413F9C29CE15790012CBCD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7413F9B29CE15790012CBCD /* Preview Assets.xcassets */; };
 		A7413FA329CF9E230012CBCD /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7413FA229CF9E230012CBCD /* SplashScreen.swift */; };
+		A7413FA729D215450012CBCD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7413FA629D215450012CBCD /* HomeView.swift */; };
+		A7413FAB29D2172B0012CBCD /* DiarioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7413FAA29D2172B0012CBCD /* DiarioView.swift */; };
+		A7413FAD29D217890012CBCD /* MiniGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7413FAC29D217890012CBCD /* MiniGameView.swift */; };
+		A7413FAF29D2184D0012CBCD /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7413FAE29D2184D0012CBCD /* ConfigView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +25,10 @@
 		A7413F9829CE15790012CBCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7413F9B29CE15790012CBCD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A7413FA229CF9E230012CBCD /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		A7413FA629D215450012CBCD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A7413FAA29D2172B0012CBCD /* DiarioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiarioView.swift; sourceTree = "<group>"; };
+		A7413FAC29D217890012CBCD /* MiniGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGameView.swift; sourceTree = "<group>"; };
+		A7413FAE29D2184D0012CBCD /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,10 @@
 				A7413F9429CE15780012CBCD /* Teste_PlantasApp.swift */,
 				A7413F9629CE15780012CBCD /* ContentView.swift */,
 				A7413FA229CF9E230012CBCD /* SplashScreen.swift */,
+				A7413FA629D215450012CBCD /* HomeView.swift */,
+				A7413FAA29D2172B0012CBCD /* DiarioView.swift */,
+				A7413FAC29D217890012CBCD /* MiniGameView.swift */,
+				A7413FAE29D2184D0012CBCD /* ConfigView.swift */,
 				A7413F9829CE15790012CBCD /* Assets.xcassets */,
 				A7413F9A29CE15790012CBCD /* Preview Content */,
 			);
@@ -140,7 +152,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7413FAB29D2172B0012CBCD /* DiarioView.swift in Sources */,
+				A7413FAD29D217890012CBCD /* MiniGameView.swift in Sources */,
 				A7413FA329CF9E230012CBCD /* SplashScreen.swift in Sources */,
+				A7413FAF29D2184D0012CBCD /* ConfigView.swift in Sources */,
+				A7413FA729D215450012CBCD /* HomeView.swift in Sources */,
 				A7413F9729CE15780012CBCD /* ContentView.swift in Sources */,
 				A7413F9529CE15780012CBCD /* Teste_PlantasApp.swift in Sources */,
 			);
