@@ -12,6 +12,7 @@
 		A7413F9929CE15790012CBCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7413F9829CE15790012CBCD /* Assets.xcassets */; };
 		A7413F9C29CE15790012CBCD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7413F9B29CE15790012CBCD /* Preview Assets.xcassets */; };
 		A7413FA329CF9E230012CBCD /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7413FA229CF9E230012CBCD /* SplashScreen.swift */; };
+
 		A7413FA729D215450012CBCD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7413FA629D215450012CBCD /* HomeView.swift */; };
 		A7413FAB29D2172B0012CBCD /* DiarioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7413FAA29D2172B0012CBCD /* DiarioView.swift */; };
 		A7413FAD29D217890012CBCD /* MiniGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7413FAC29D217890012CBCD /* MiniGameView.swift */; };
@@ -61,6 +62,7 @@
 		A7413F9329CE15780012CBCD /* Teste_Plantas */ = {
 			isa = PBXGroup;
 			children = (
+				DF76230329D217010098A069 /* Model */,
 				A7413F9429CE15780012CBCD /* Teste_PlantasApp.swift */,
 				A7413F9629CE15780012CBCD /* ContentView.swift */,
 				A7413FA229CF9E230012CBCD /* SplashScreen.swift */,
@@ -80,6 +82,14 @@
 				A7413F9B29CE15790012CBCD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DF76230329D217010098A069 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DF76230429D217550098A069 /* UDModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +168,7 @@
 				A7413FAF29D2184D0012CBCD /* ConfigView.swift in Sources */,
 				A7413FA729D215450012CBCD /* HomeView.swift in Sources */,
 				A7413F9729CE15780012CBCD /* ContentView.swift in Sources */,
+				DF76230529D217550098A069 /* UDModel.swift in Sources */,
 				A7413F9529CE15780012CBCD /* Teste_PlantasApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,7 +298,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Teste_Plantas/Preview Content\"";
-				DEVELOPMENT_TEAM = 7NPP9SCGSB;
+				DEVELOPMENT_TEAM = RRUDNBUBWM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -320,7 +331,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Teste_Plantas/Preview Content\"";
-				DEVELOPMENT_TEAM = 7NPP9SCGSB;
+				DEVELOPMENT_TEAM = RRUDNBUBWM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
