@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var scale = 0.8
+//    var dicionario: [Int : [Bool]]
     
     var body: some View {
         VStack {
