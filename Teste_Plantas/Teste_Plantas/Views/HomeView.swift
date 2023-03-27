@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @ObservedObject var vm = ViewModel()
+    
     var body: some View {
         VStack{
             Button(action: {
