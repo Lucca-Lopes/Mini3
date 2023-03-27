@@ -12,11 +12,11 @@
 		A7413F9929CE15790012CBCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7413F9829CE15790012CBCD /* Assets.xcassets */; };
 		A7413F9C29CE15790012CBCD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7413F9B29CE15790012CBCD /* Preview Assets.xcassets */; };
 		A7413FA329CF9E230012CBCD /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7413FA229CF9E230012CBCD /* SplashScreen.swift */; };
-
 		A7413FA729D215450012CBCD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7413FA629D215450012CBCD /* HomeView.swift */; };
 		A7413FAB29D2172B0012CBCD /* DiarioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7413FAA29D2172B0012CBCD /* DiarioView.swift */; };
 		A7413FAD29D217890012CBCD /* MiniGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7413FAC29D217890012CBCD /* MiniGameView.swift */; };
 		A7413FAF29D2184D0012CBCD /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7413FAE29D2184D0012CBCD /* ConfigView.swift */; };
+		DF76230729D21EDD0098A069 /* UDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76230629D21EDD0098A069 /* UDModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +30,7 @@
 		A7413FAA29D2172B0012CBCD /* DiarioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiarioView.swift; sourceTree = "<group>"; };
 		A7413FAC29D217890012CBCD /* MiniGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGameView.swift; sourceTree = "<group>"; };
 		A7413FAE29D2184D0012CBCD /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
+		DF76230629D21EDD0098A069 /* UDModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +88,7 @@
 		DF76230329D217010098A069 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DF76230429D217550098A069 /* UDModel.swift */,
+				DF76230629D21EDD0098A069 /* UDModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -164,11 +165,11 @@
 			files = (
 				A7413FAB29D2172B0012CBCD /* DiarioView.swift in Sources */,
 				A7413FAD29D217890012CBCD /* MiniGameView.swift in Sources */,
+				DF76230729D21EDD0098A069 /* UDModel.swift in Sources */,
 				A7413FA329CF9E230012CBCD /* SplashScreen.swift in Sources */,
 				A7413FAF29D2184D0012CBCD /* ConfigView.swift in Sources */,
 				A7413FA729D215450012CBCD /* HomeView.swift in Sources */,
 				A7413F9729CE15780012CBCD /* ContentView.swift in Sources */,
-				DF76230529D217550098A069 /* UDModel.swift in Sources */,
 				A7413F9529CE15780012CBCD /* Teste_PlantasApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
