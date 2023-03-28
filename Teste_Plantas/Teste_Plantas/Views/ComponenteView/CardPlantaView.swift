@@ -12,6 +12,7 @@ import SwiftUI
 struct CardPlantaView: View {
     
     let cardPlantaModel: CardPlantaModel
+    
     let cardWidth = UIScreen.main.bounds.width / 2.5
     let cardHeight = UIScreen.main.bounds.width / 2.5
     

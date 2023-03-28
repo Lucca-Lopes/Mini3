@@ -21,6 +21,8 @@
 		EBFD5C5E29D22CE10013A8A2 /* CardPlantaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFD5C5D29D22CE10013A8A2 /* CardPlantaView.swift */; };
 		EBFD5C6029D22CF90013A8A2 /* CardPlantaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFD5C5F29D22CF90013A8A2 /* CardPlantaModel.swift */; };
 		EBFD5C6229D232080013A8A2 /* PlantaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFD5C6129D232080013A8A2 /* PlantaView.swift */; };
+		EBFD5C6629D318B00013A8A2 /* BotaoPadraoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFD5C6529D318B00013A8A2 /* BotaoPadraoView.swift */; };
+		EBFD5C6829D327260013A8A2 /* NavigationLinkPadrao.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFD5C6729D327260013A8A2 /* NavigationLinkPadrao.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		EBFD5C5D29D22CE10013A8A2 /* CardPlantaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPlantaView.swift; sourceTree = "<group>"; };
 		EBFD5C5F29D22CF90013A8A2 /* CardPlantaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPlantaModel.swift; sourceTree = "<group>"; };
 		EBFD5C6129D232080013A8A2 /* PlantaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantaView.swift; sourceTree = "<group>"; };
+		EBFD5C6529D318B00013A8A2 /* BotaoPadraoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoPadraoView.swift; sourceTree = "<group>"; };
+		EBFD5C6729D327260013A8A2 /* NavigationLinkPadrao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLinkPadrao.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				EBFD5C5D29D22CE10013A8A2 /* CardPlantaView.swift */,
+				EBFD5C6529D318B00013A8A2 /* BotaoPadraoView.swift */,
+				EBFD5C6729D327260013A8A2 /* NavigationLinkPadrao.swift */,
 			);
 			path = ComponenteView;
 			sourceTree = "<group>";
@@ -209,6 +215,8 @@
 				A7413FAF29D2184D0012CBCD /* ConfigView.swift in Sources */,
 				A7413FA729D215450012CBCD /* HomeView.swift in Sources */,
 				A7413F9729CE15780012CBCD /* ContentView.swift in Sources */,
+				EBFD5C6829D327260013A8A2 /* NavigationLinkPadrao.swift in Sources */,
+				EBFD5C6629D318B00013A8A2 /* BotaoPadraoView.swift in Sources */,
 				A7413F9529CE15780012CBCD /* Teste_PlantasApp.swift in Sources */,
 				EBFD5C6029D22CF90013A8A2 /* CardPlantaModel.swift in Sources */,
 			);

@@ -2,7 +2,7 @@ import SwiftUI
 
 struct PlantaView: View {
     
-//    @State private var selectedPlant: CardPlantaModel
+    //    @State private var selectedPlant: CardPlantaModel
     
     let plantas: [CardPlantaModel] = [
         CardPlantaModel(id: 1, nome: "João", dia: "1", imagem: Image("girassol1")),
@@ -17,6 +17,24 @@ struct PlantaView: View {
                     ForEach(plantas, id: \.id) { planta in
                         CardPlantaView(cardPlantaModel: planta)
                     }
+                }
+                BotaoPadraoView(
+                    action: {
+                        print("Botão personalizado foi pressionado.")
+                    },
+                    title: "Clique aqui",
+                    foregrounColor: .white,
+                    font: .system(size: 18),
+                    padding: 10,
+                    backgroundColor: .blue,
+                    cornerRadius: 10
+                )
+                
+                VStack {
+                    NavigationLinkPadrao(destination: DiarioView(),
+                                         label: Text("Clique Na Navigation"),
+                                         foregroundColor: .red,
+                                         fontSize: 24)
                 }
             }
         }
