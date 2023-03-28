@@ -29,7 +29,7 @@ struct HomeView: View {
                     NavigationLink(destination: {
                         ConfigView()
                     }, label: {
-                        Image(systemName: "gear.circle")
+                        Image(systemName: "info.circle")
                     })
                 }
             }

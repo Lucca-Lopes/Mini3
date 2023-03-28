@@ -16,6 +16,7 @@
 		A7413FAB29D2172B0012CBCD /* DiarioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7413FAA29D2172B0012CBCD /* DiarioView.swift */; };
 		A7413FAD29D217890012CBCD /* AprendaCuidarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7413FAC29D217890012CBCD /* AprendaCuidarView.swift */; };
 		A7413FAF29D2184D0012CBCD /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7413FAE29D2184D0012CBCD /* ConfigView.swift */; };
+		A772E6CD29D37A31006CC399 /* BotaoConfigAprenda.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772E6CC29D37A31006CC399 /* BotaoConfigAprenda.swift */; };
 		DF0E348B29D35F76002E6024 /* SobreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E348A29D35F76002E6024 /* SobreView.swift */; };
 		DF0E348D29D35FB4002E6024 /* PrivacidadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E348C29D35FB4002E6024 /* PrivacidadeView.swift */; };
 		DF0E348F29D35FCD002E6024 /* DireitosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E348E29D35FCD002E6024 /* DireitosView.swift */; };
@@ -40,6 +41,7 @@
 		A7413FAA29D2172B0012CBCD /* DiarioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiarioView.swift; sourceTree = "<group>"; };
 		A7413FAC29D217890012CBCD /* AprendaCuidarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AprendaCuidarView.swift; sourceTree = "<group>"; };
 		A7413FAE29D2184D0012CBCD /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
+		A772E6CC29D37A31006CC399 /* BotaoConfigAprenda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoConfigAprenda.swift; sourceTree = "<group>"; };
 		DF0E348A29D35F76002E6024 /* SobreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SobreView.swift; sourceTree = "<group>"; };
 		DF0E348C29D35FB4002E6024 /* PrivacidadeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacidadeView.swift; sourceTree = "<group>"; };
 		DF0E348E29D35FCD002E6024 /* DireitosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DireitosView.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				EBFD5C5D29D22CE10013A8A2 /* CardPlantaView.swift */,
 				EBFD5C6529D318B00013A8A2 /* BotaoPadraoView.swift */,
 				EBFD5C6729D327260013A8A2 /* NavigationLinkPadrao.swift */,
+				A772E6CC29D37A31006CC399 /* BotaoConfigAprenda.swift */,
 			);
 			path = ComponentesView;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				A7413FAD29D217890012CBCD /* AprendaCuidarView.swift in Sources */,
 				DF76230729D21EDD0098A069 /* UDModel.swift in Sources */,
 				A7413FA329CF9E230012CBCD /* SplashScreen.swift in Sources */,
+				A772E6CD29D37A31006CC399 /* BotaoConfigAprenda.swift in Sources */,
 				EBFD5C6229D232080013A8A2 /* PlantaView.swift in Sources */,
 				A7413FAF29D2184D0012CBCD /* ConfigView.swift in Sources */,
 				A7413FA729D215450012CBCD /* HomeView.swift in Sources */,
