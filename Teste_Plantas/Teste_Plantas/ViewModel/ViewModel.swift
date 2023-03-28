@@ -27,20 +27,34 @@ class ViewModel: ObservableObject {
     
     private func verificarDiaAtual(){
         let diaAtualCultivo: Int = dateComponents.calendar!.numberOfDaysBetween(dataInicial, to: Date())
-        if diaAtualCultivo > dias.keys.count - 1 {
-            while dias.count - 1 < diaAtualCultivo {
-//                if dia.value.isEmpty {
-//                    dias.updateValue([false], forKey: dia.key)
-//                }
+        if diaAtualCultivo > dias.keys.count {
+            while dias.count <= diaAtualCultivo {
+                let tarefasNovoDia = designarTarefas(dia: dias.count)
+                dias.updateValue(tarefasNovoDia, forKey: dias.count)
             }
             print("Numero do dia de cultivo atual: \(diaAtualCultivo)")
-//            dias.updateValue([true], forKey: 2)
-//            dias.updateValue([false], forKey: 1)
             print(dias)
         }
     }
-    private func designarTarefas(){
-        
+    private func designarTarefas(dia: Int) -> [Bool] {
+        switch dia % 7 {
+        case 0:
+            return [false]
+        case 1:
+            return [false, false, false]
+        case 2:
+            return [false, false]
+        case 3:
+            return [false]
+        case 4:
+            return [false, false]
+        case 5:
+            return [false]
+        case 6:
+            return [false, false]
+        default:
+            return [false]
+        }
     }
 }
 
