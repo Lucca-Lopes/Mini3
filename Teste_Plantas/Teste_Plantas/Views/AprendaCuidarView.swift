@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MiniGameView: View {
+struct AprendaCuidarView: View {
     var body: some View {
         VStack{
             NavigationLink(destination:{

@@ -127,7 +127,6 @@
 				A7413FAA29D2172B0012CBCD /* DiarioView.swift */,
 				A7413FAC29D217890012CBCD /* AprendaCuidarView.swift */,
 				A7413FAE29D2184D0012CBCD /* ConfigView.swift */,
-				DFCACD2929D30B33007F8838 /* BotaoHome.swift */,
 				EBFD5C6129D232080013A8A2 /* PlantaView.swift */,
 				DF0E348A29D35F76002E6024 /* SobreView.swift */,
 				DF0E348C29D35FB4002E6024 /* PrivacidadeView.swift */,
@@ -140,6 +139,7 @@
 		EBFD5C5C29D22CBF0013A8A2 /* ComponentesView */ = {
 			isa = PBXGroup;
 			children = (
+				DFCACD2929D30B33007F8838 /* BotaoHome.swift */,
 				EBFD5C5D29D22CE10013A8A2 /* CardPlantaView.swift */,
 				EBFD5C6529D318B00013A8A2 /* BotaoPadraoView.swift */,
 				EBFD5C6729D327260013A8A2 /* NavigationLinkPadrao.swift */,
