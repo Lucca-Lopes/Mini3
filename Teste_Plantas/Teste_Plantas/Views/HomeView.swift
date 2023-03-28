@@ -14,56 +14,9 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             VStack{
-                NavigationLink(destination: {
-                    DiarioView()
-                }, label: {
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 25)
-                            .frame(height: vm.screenHeight * 0.3, alignment: .center)
-                            .padding(.horizontal)
-                            .foregroundColor(.green)
-                            
-                        HStack {
-                            Image(systemName: "book.fill")
-                                .resizable()
-                                .frame(width: vm.screenWidth * 0.2, height: vm.screenHeight * 0.075)
-                                .padding(.leading, 50)
-                                .foregroundColor(.black)
-                            Spacer()
-                            Text("Diário")
-                                .frame(width: vm.screenWidth * 0.5, alignment: .center)
-                                .font(.system(size: 36))
-                                .padding(.trailing, 50)
-                                .foregroundColor(.black)
-                        }
-                    }
-                })
+                BotaoHome(screenHeight: vm.screenHeight, screenWidth: vm.screenWidth, nextView: DiarioView(), nomeIcone: "book.fill", textoBotao: "Diário")
                 .padding(.vertical, 50)
-                
-                NavigationLink(destination: {
-                    AprendaCuidarView()
-                }, label: {
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 25)
-                            .frame(height: vm.screenHeight * 0.3, alignment: .center)
-                            .padding(.horizontal)
-                            .foregroundColor(.green)
-                            
-                        HStack {
-                            Image(systemName: "camera.macro")
-                                .resizable()
-                                .frame(width: vm.screenWidth * 0.2, height: vm.screenHeight * 0.1)
-                                .padding(.leading, 50)
-                                .foregroundColor(.black)
-                            Spacer()
-                            Text("Aprenda a cuidar")
-                                .frame(width: vm.screenWidth * 0.5, alignment: .center)
-                                .font(.system(size: 36))
-                                .padding(.trailing, 50)
-                                .foregroundColor(.black)
-                        }
-                    }
-                })
+                BotaoHome(screenHeight: vm.screenHeight, screenWidth: vm.screenWidth, nextView: AprendaCuidarView(), nomeIcone: "camera.macro", textoBotao: "Aprenda a cuidar")
             }
             .toolbar{
                 ToolbarItem {
@@ -86,9 +39,3 @@ struct HomeView: View {
         
     }
 }
-
-//struct HomeView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        HomeView()
-//    }
-//}

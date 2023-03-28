@@ -18,6 +18,7 @@
 		A7413FAF29D2184D0012CBCD /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7413FAE29D2184D0012CBCD /* ConfigView.swift */; };
 		DF76230729D21EDD0098A069 /* UDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76230629D21EDD0098A069 /* UDModel.swift */; };
 		DF76230A29D2219C0098A069 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76230929D2219C0098A069 /* ViewModel.swift */; };
+		DFCACD2A29D30B33007F8838 /* BotaoHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCACD2929D30B33007F8838 /* BotaoHome.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		A7413FAE29D2184D0012CBCD /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
 		DF76230629D21EDD0098A069 /* UDModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDModel.swift; sourceTree = "<group>"; };
 		DF76230929D2219C0098A069 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		DFCACD2929D30B33007F8838 /* BotaoHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoHome.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				A7413FAA29D2172B0012CBCD /* DiarioView.swift */,
 				A7413FAC29D217890012CBCD /* AprendaCuidarView.swift */,
 				A7413FAE29D2184D0012CBCD /* ConfigView.swift */,
+				DFCACD2929D30B33007F8838 /* BotaoHome.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			files = (
 				A7413FAB29D2172B0012CBCD /* DiarioView.swift in Sources */,
 				DF76230A29D2219C0098A069 /* ViewModel.swift in Sources */,
+				DFCACD2A29D30B33007F8838 /* BotaoHome.swift in Sources */,
 				A7413FAD29D217890012CBCD /* AprendaCuidarView.swift in Sources */,
 				DF76230729D21EDD0098A069 /* UDModel.swift in Sources */,
 				A7413FA329CF9E230012CBCD /* SplashScreen.swift in Sources */,

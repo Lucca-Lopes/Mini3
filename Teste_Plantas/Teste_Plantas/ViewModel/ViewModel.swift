@@ -26,21 +26,28 @@ class ViewModel: ObservableObject {
     }
     
     private func verificarDiaAtual(){
-        let distanciaDias: Int = dateComponents.calendar!.numberOfDaysBetween(dataInicial, to: Date())
-        print("Data de início: \(dataInicial)")
-        print("Data atual: \(Date())")
-        if distanciaDias > dias.keys.count - 1 {
-            print("Numero do dia de cultivo atual: \(distanciaDias)")
+        let diaAtualCultivo: Int = dateComponents.calendar!.numberOfDaysBetween(dataInicial, to: Date())
+        if diaAtualCultivo > dias.keys.count - 1 {
+            while dias.count - 1 < diaAtualCultivo {
+//                if dia.value.isEmpty {
+//                    dias.updateValue([false], forKey: dia.key)
+//                }
+            }
+            print("Numero do dia de cultivo atual: \(diaAtualCultivo)")
+//            dias.updateValue([true], forKey: 2)
+//            dias.updateValue([false], forKey: 1)
+            print(dias)
         }
+    }
+    private func designarTarefas(){
+        
     }
 }
 
 extension Calendar {
     func numberOfDaysBetween(_ from: Date, to: Date) -> Int {
         let fromDate = startOfDay(for: from)
-        print("fromDate: \(fromDate)")
         let toDate = startOfDay(for: to)
-        print("toDate: \(toDate)")
         let numberOfDays = dateComponents([.day], from: fromDate, to: toDate)
         return numberOfDays.day! + 1
     }
