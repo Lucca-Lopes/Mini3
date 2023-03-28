@@ -14,7 +14,7 @@
 		A7413FA329CF9E230012CBCD /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7413FA229CF9E230012CBCD /* SplashScreen.swift */; };
 		A7413FA729D215450012CBCD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7413FA629D215450012CBCD /* HomeView.swift */; };
 		A7413FAB29D2172B0012CBCD /* DiarioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7413FAA29D2172B0012CBCD /* DiarioView.swift */; };
-		A7413FAD29D217890012CBCD /* MiniGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7413FAC29D217890012CBCD /* MiniGameView.swift */; };
+		A7413FAD29D217890012CBCD /* AprendaCuidarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7413FAC29D217890012CBCD /* AprendaCuidarView.swift */; };
 		A7413FAF29D2184D0012CBCD /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7413FAE29D2184D0012CBCD /* ConfigView.swift */; };
 		DF76230729D21EDD0098A069 /* UDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76230629D21EDD0098A069 /* UDModel.swift */; };
 		DF76230A29D2219C0098A069 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76230929D2219C0098A069 /* ViewModel.swift */; };
@@ -29,7 +29,7 @@
 		A7413FA229CF9E230012CBCD /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		A7413FA629D215450012CBCD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A7413FAA29D2172B0012CBCD /* DiarioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiarioView.swift; sourceTree = "<group>"; };
-		A7413FAC29D217890012CBCD /* MiniGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGameView.swift; sourceTree = "<group>"; };
+		A7413FAC29D217890012CBCD /* AprendaCuidarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AprendaCuidarView.swift; sourceTree = "<group>"; };
 		A7413FAE29D2184D0012CBCD /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
 		DF76230629D21EDD0098A069 /* UDModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDModel.swift; sourceTree = "<group>"; };
 		DF76230929D2219C0098A069 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 				A7413FA229CF9E230012CBCD /* SplashScreen.swift */,
 				A7413FA629D215450012CBCD /* HomeView.swift */,
 				A7413FAA29D2172B0012CBCD /* DiarioView.swift */,
-				A7413FAC29D217890012CBCD /* MiniGameView.swift */,
+				A7413FAC29D217890012CBCD /* AprendaCuidarView.swift */,
 				A7413FAE29D2184D0012CBCD /* ConfigView.swift */,
 			);
 			path = Views;
@@ -184,7 +184,7 @@
 			files = (
 				A7413FAB29D2172B0012CBCD /* DiarioView.swift in Sources */,
 				DF76230A29D2219C0098A069 /* ViewModel.swift in Sources */,
-				A7413FAD29D217890012CBCD /* MiniGameView.swift in Sources */,
+				A7413FAD29D217890012CBCD /* AprendaCuidarView.swift in Sources */,
 				DF76230729D21EDD0098A069 /* UDModel.swift in Sources */,
 				A7413FA329CF9E230012CBCD /* SplashScreen.swift in Sources */,
 				A7413FAF29D2184D0012CBCD /* ConfigView.swift in Sources */,

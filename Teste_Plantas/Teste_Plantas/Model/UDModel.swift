@@ -10,19 +10,10 @@ import Foundation
 class UDModel {
     var userDefaults = UserDefaults.standard
     var dataInicial: Date = Date()
-//        get {
-//            if !receberData() {
-//                let data: Date = Date()
-//                definirData(data: data)
-//                return data
-//            }
-//            return self.dataInicial
-//        }
-//        set {
-//            self.dataInicial = newValue
-//        }
+    
     
     init(){
+//        clearDataBase()
         if !receberData() {
             let data: Date = Date()
             definirData(data: data)
@@ -48,5 +39,10 @@ class UDModel {
     func receberDias() {
         guard let load = userDefaults.object(forKey: "Dias") as? [Int : [Bool]] else { return }
         dias = load
+    }
+    
+    func clearDataBase(){
+        userDefaults.set(nil, forKey: "DataInicial")
+        userDefaults.set(nil, forKey: "Dias")
     }
 }
