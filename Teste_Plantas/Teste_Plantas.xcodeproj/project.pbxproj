@@ -18,7 +18,14 @@
 		A7413FAF29D2184D0012CBCD /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7413FAE29D2184D0012CBCD /* ConfigView.swift */; };
 		DF76230729D21EDD0098A069 /* UDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76230629D21EDD0098A069 /* UDModel.swift */; };
 		DF76230A29D2219C0098A069 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76230929D2219C0098A069 /* ViewModel.swift */; };
+
 		DFCACD2A29D30B33007F8838 /* BotaoHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCACD2929D30B33007F8838 /* BotaoHome.swift */; };
+		EBFD5C5E29D22CE10013A8A2 /* CardPlantaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFD5C5D29D22CE10013A8A2 /* CardPlantaView.swift */; };
+		EBFD5C6029D22CF90013A8A2 /* CardPlantaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFD5C5F29D22CF90013A8A2 /* CardPlantaModel.swift */; };
+		EBFD5C6229D232080013A8A2 /* PlantaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFD5C6129D232080013A8A2 /* PlantaView.swift */; };
+		EBFD5C6629D318B00013A8A2 /* BotaoPadraoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFD5C6529D318B00013A8A2 /* BotaoPadraoView.swift */; };
+		EBFD5C6829D327260013A8A2 /* NavigationLinkPadrao.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFD5C6729D327260013A8A2 /* NavigationLinkPadrao.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +42,12 @@
 		DF76230629D21EDD0098A069 /* UDModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDModel.swift; sourceTree = "<group>"; };
 		DF76230929D2219C0098A069 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		DFCACD2929D30B33007F8838 /* BotaoHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoHome.swift; sourceTree = "<group>"; };
+		EBFD5C5D29D22CE10013A8A2 /* CardPlantaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPlantaView.swift; sourceTree = "<group>"; };
+		EBFD5C5F29D22CF90013A8A2 /* CardPlantaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPlantaModel.swift; sourceTree = "<group>"; };
+		EBFD5C6129D232080013A8A2 /* PlantaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantaView.swift; sourceTree = "<group>"; };
+		EBFD5C6529D318B00013A8A2 /* BotaoPadraoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoPadraoView.swift; sourceTree = "<group>"; };
+		EBFD5C6729D327260013A8A2 /* NavigationLinkPadrao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLinkPadrao.swift; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				DF76230629D21EDD0098A069 /* UDModel.swift */,
+				EBFD5C5F29D22CF90013A8A2 /* CardPlantaModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -111,8 +125,20 @@
 				A7413FAC29D217890012CBCD /* AprendaCuidarView.swift */,
 				A7413FAE29D2184D0012CBCD /* ConfigView.swift */,
 				DFCACD2929D30B33007F8838 /* BotaoHome.swift */,
+				EBFD5C6129D232080013A8A2 /* PlantaView.swift */,
+				EBFD5C5C29D22CBF0013A8A2 /* ComponentesView */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		EBFD5C5C29D22CBF0013A8A2 /* ComponentesView */ = {
+			isa = PBXGroup;
+			children = (
+				EBFD5C5D29D22CE10013A8A2 /* CardPlantaView.swift */,
+				EBFD5C6529D318B00013A8A2 /* BotaoPadraoView.swift */,
+				EBFD5C6729D327260013A8A2 /* NavigationLinkPadrao.swift */,
+			);
+			path = ComponentesView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,16 +211,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBFD5C5E29D22CE10013A8A2 /* CardPlantaView.swift in Sources */,
 				A7413FAB29D2172B0012CBCD /* DiarioView.swift in Sources */,
 				DF76230A29D2219C0098A069 /* ViewModel.swift in Sources */,
 				DFCACD2A29D30B33007F8838 /* BotaoHome.swift in Sources */,
 				A7413FAD29D217890012CBCD /* AprendaCuidarView.swift in Sources */,
 				DF76230729D21EDD0098A069 /* UDModel.swift in Sources */,
 				A7413FA329CF9E230012CBCD /* SplashScreen.swift in Sources */,
+				EBFD5C6229D232080013A8A2 /* PlantaView.swift in Sources */,
 				A7413FAF29D2184D0012CBCD /* ConfigView.swift in Sources */,
 				A7413FA729D215450012CBCD /* HomeView.swift in Sources */,
 				A7413F9729CE15780012CBCD /* ContentView.swift in Sources */,
+				EBFD5C6829D327260013A8A2 /* NavigationLinkPadrao.swift in Sources */,
+				EBFD5C6629D318B00013A8A2 /* BotaoPadraoView.swift in Sources */,
 				A7413F9529CE15780012CBCD /* Teste_PlantasApp.swift in Sources */,
+				EBFD5C6029D22CF90013A8A2 /* CardPlantaModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
