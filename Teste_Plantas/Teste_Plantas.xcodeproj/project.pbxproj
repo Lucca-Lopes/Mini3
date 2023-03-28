@@ -19,6 +19,7 @@
 		DF0E348B29D35F76002E6024 /* SobreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E348A29D35F76002E6024 /* SobreView.swift */; };
 		DF0E348D29D35FB4002E6024 /* PrivacidadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E348C29D35FB4002E6024 /* PrivacidadeView.swift */; };
 		DF0E348F29D35FCD002E6024 /* DireitosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E348E29D35FCD002E6024 /* DireitosView.swift */; };
+		DF0E349129D38114002E6024 /* DiaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E349029D38114002E6024 /* DiaView.swift */; };
 		DF76230729D21EDD0098A069 /* UDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76230629D21EDD0098A069 /* UDModel.swift */; };
 		DF76230A29D2219C0098A069 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76230929D2219C0098A069 /* ViewModel.swift */; };
 		DFCACD2A29D30B33007F8838 /* BotaoHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCACD2929D30B33007F8838 /* BotaoHome.swift */; };
@@ -43,6 +44,7 @@
 		DF0E348A29D35F76002E6024 /* SobreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SobreView.swift; sourceTree = "<group>"; };
 		DF0E348C29D35FB4002E6024 /* PrivacidadeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacidadeView.swift; sourceTree = "<group>"; };
 		DF0E348E29D35FCD002E6024 /* DireitosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DireitosView.swift; sourceTree = "<group>"; };
+		DF0E349029D38114002E6024 /* DiaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaView.swift; sourceTree = "<group>"; };
 		DF76230629D21EDD0098A069 /* UDModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDModel.swift; sourceTree = "<group>"; };
 		DF76230929D2219C0098A069 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		DFCACD2929D30B33007F8838 /* BotaoHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoHome.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				DF0E348A29D35F76002E6024 /* SobreView.swift */,
 				DF0E348C29D35FB4002E6024 /* PrivacidadeView.swift */,
 				DF0E348E29D35FCD002E6024 /* DireitosView.swift */,
+				DF0E349029D38114002E6024 /* DiaView.swift */,
 				EBFD5C5C29D22CBF0013A8A2 /* ComponentesView */,
 			);
 			path = Views;
@@ -217,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF0E349129D38114002E6024 /* DiaView.swift in Sources */,
 				DF0E348B29D35F76002E6024 /* SobreView.swift in Sources */,
 				EBFD5C5E29D22CE10013A8A2 /* CardPlantaView.swift in Sources */,
 				A7413FAB29D2172B0012CBCD /* DiarioView.swift in Sources */,

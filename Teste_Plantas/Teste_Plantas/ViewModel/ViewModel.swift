@@ -15,6 +15,7 @@ class ViewModel: ObservableObject {
     
     @Published var dataInicial: Date
     @Published var dias: [Int : [Bool]]
+    @Published var diasModel: [CardPlantaModel] = []
     var dateComponents = DateComponents()
     
     public init() {
@@ -23,17 +24,24 @@ class ViewModel: ObservableObject {
         self.dateComponents.timeZone = TimeZone.current
         self.dateComponents.calendar = Calendar.current
         verificarDiaAtual()
+        dictParaStruct(dicionario: self.dias)
+    }
+    
+    private func dictParaStruct(dicionario: [Int:[Bool]]){
+        for dia in dicionario.keys {
+            diasModel.append(.init(dia: dia, tarefas: dicionario[dia] ?? [false]))
+        }
     }
     
     private func verificarDiaAtual(){
         let diaAtualCultivo: Int = dateComponents.calendar!.numberOfDaysBetween(dataInicial, to: Date())
         if diaAtualCultivo > dias.keys.count {
-            while dias.count <= diaAtualCultivo {
-                let tarefasNovoDia = designarTarefas(dia: dias.count)
-                dias.updateValue(tarefasNovoDia, forKey: dias.count)
+            while dias.count < diaAtualCultivo {
+                let tarefasNovoDia = designarTarefas(dia: dias.count + 1)
+                dias.updateValue(tarefasNovoDia, forKey: dias.count + 1)
             }
             print("Numero do dia de cultivo atual: \(diaAtualCultivo)")
-            print(dias)
+            print("Dias: \(dias)")
         }
     }
     private func designarTarefas(dia: Int) -> [Bool] {
