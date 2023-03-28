@@ -120,19 +120,19 @@
 				A7413FAC29D217890012CBCD /* MiniGameView.swift */,
 				A7413FAE29D2184D0012CBCD /* ConfigView.swift */,
 				EBFD5C6129D232080013A8A2 /* PlantaView.swift */,
-				EBFD5C5C29D22CBF0013A8A2 /* ComponenteView */,
+				EBFD5C5C29D22CBF0013A8A2 /* ComponentesView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		EBFD5C5C29D22CBF0013A8A2 /* ComponenteView */ = {
+		EBFD5C5C29D22CBF0013A8A2 /* ComponentesView */ = {
 			isa = PBXGroup;
 			children = (
 				EBFD5C5D29D22CE10013A8A2 /* CardPlantaView.swift */,
 				EBFD5C6529D318B00013A8A2 /* BotaoPadraoView.swift */,
 				EBFD5C6729D327260013A8A2 /* NavigationLinkPadrao.swift */,
 			);
-			path = ComponenteView;
+			path = ComponentesView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
