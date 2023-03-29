@@ -24,10 +24,13 @@ struct PlantaView: View {
                     },
                     title: "Clique aqui",
                     foregrounColor: .white,
+                    
                     font: .system(size: 18),
                     padding: 10,
                     backgroundColor: .blue,
-                    cornerRadius: 10
+                    cornerRadius: 10,
+                    width: 100,
+                    height: 100
                 )
                 
                 VStack {

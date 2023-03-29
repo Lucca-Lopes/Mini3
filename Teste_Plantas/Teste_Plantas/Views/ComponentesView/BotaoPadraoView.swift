@@ -15,7 +15,8 @@ struct BotaoPadraoView: View {
     let padding: CGFloat
     let backgroundColor: Color
     let cornerRadius: CGFloat
-    
+    let width: CGFloat
+    let height: CGFloat
     
     
     var body: some View {
@@ -25,6 +26,7 @@ struct BotaoPadraoView: View {
                 .font(font)
         }
         .padding(padding)
+        .frame(width: width, height: height)
         .background(backgroundColor)
         .cornerRadius(cornerRadius)
     }
