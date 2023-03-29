@@ -15,27 +15,31 @@ struct PlantaView: View {
             ScrollView {
                 LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
                     ForEach(plantas, id: \.id) { planta in
-                        CardPlantaView(cardPlantaModel: planta)
+                        CardPlantaView(cardPlantaModel: planta, destination: AnyView(DiarioView()))
                     }
                 }
-                BotaoPadraoView(
-                    action: {
-                        print("Botão personalizado foi pressionado.")
-                    },
-                    title: "Clique aqui",
-                    foregrounColor: .white,
-                    font: .system(size: 18),
-                    padding: 10,
-                    backgroundColor: .blue,
-                    cornerRadius: 10
-                )
                 
-                VStack {
-                    NavigationLinkPadrao(destination: DiarioView(),
-                                         label: Text("Clique Na Navigation"),
-                                         foregroundColor: .red,
-                                         fontSize: 24)
-                }
+//                BotaoPadraoView(
+//                    action: {
+//                        print("Botão personalizado foi pressionado.")
+//                    },
+//                    title: "Clique aqui",
+//                    foregrounColor: .white,
+//                    
+//                    font: .system(size: 18),
+//                    padding: 10,
+//                    backgroundColor: .blue,
+//                    cornerRadius: 10,
+//                    width: 100,
+//                    height: 100
+//                )
+                
+//                VStack {
+//                    NavigationLinkPadrao(destination: DiarioView(),
+//                                         label: Text("Clique Na Navigation"),
+//                                         foregroundColor: .red,
+//                                         fontSize: 24)
+//                }
             }
         }
     }

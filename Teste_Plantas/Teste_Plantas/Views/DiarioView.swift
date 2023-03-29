@@ -9,7 +9,11 @@ import SwiftUI
 
 struct DiarioView: View {
     var body: some View {
-        Text("Diario aqui")
+        NavigationView {
+            CardPlantaInicioView(title: "Começar cuidar",
+                                 subtitle: "do girassol",
+                                 imageIcone: "camera.macro")
+        }
     }
 }
 
