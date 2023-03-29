@@ -9,16 +9,17 @@ import Foundation
 import SwiftUI
 
 
-struct CardPlantaView: View {
+struct GridCellPlantaView: View {
     
-    let diaModel: DiaModel
-    let vm: ViewModel
+    @ObservedObject var vm: ViewModel
+    
+    let numeroDia: Int
     
     let cardWidth = UIScreen.main.bounds.width / 2.5
     let cardHeight = UIScreen.main.bounds.width / 2.5
     
     var body: some View {
-        NavigationLink(destination: DetalheDiaView(diaModel: diaModel, vm: vm)) {
+        NavigationLink(destination: DetalheDiaView(vm: vm, numeroDia: numeroDia)) {
             ZStack {
                 RoundedRectangle(cornerRadius: 5)
                     .foregroundColor(.white)
@@ -26,9 +27,9 @@ struct CardPlantaView: View {
                     .padding(.horizontal, 10)
                     .padding(.vertical, 10)
                 VStack {
-                    Image(diaModel.imagem)
+                    Image(vm.dias[numeroDia - 1].imagem)
                         .padding()
-                    Text("Dia \(diaModel.numero)")
+                    Text("Dia \(vm.dias[numeroDia - 1].numero)")
                         .font(.title)
                         .fontWeight(.bold)
                         .padding()

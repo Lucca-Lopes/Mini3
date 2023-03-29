@@ -9,13 +9,14 @@ import SwiftUI
 
 struct DetalheDiaView: View {
     
-    @State var diaModel: DiaModel
-    let vm: ViewModel
+    @ObservedObject var vm: ViewModel
+    
+    let numeroDia: Int
     
     var body: some View {
         List {
-            ForEach(diaModel.tarefas, id: \.hashValue){ tarefa in
-                TarefaRowView(tarefa: tarefa, vm: vm)
+            ForEach(vm.dias[numeroDia - 1].tarefas, id: \.hashValue){ tarefa in
+                TarefaRowView(vm: vm, numeroDia: numeroDia, indexTarefa: vm.dias[numeroDia - 1].tarefas.firstIndex(of: tarefa) ?? 0)
             }
         }
     }

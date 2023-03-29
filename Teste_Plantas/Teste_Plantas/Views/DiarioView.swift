@@ -14,8 +14,8 @@ struct DiarioView: View {
     var body: some View {
         ScrollView {
             LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 5) {
-                ForEach(vm.diasModel, id: \.numero) { dia in
-                    CardPlantaView(diaModel: dia, vm: vm)
+                ForEach(vm.dias, id: \.numero) { dia in
+                    GridCellPlantaView(vm: vm, numeroDia: dia.numero)
                 }
             }
         }

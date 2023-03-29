@@ -14,8 +14,7 @@ class ViewModel: ObservableObject {
     public let screenHeight = UIScreen.main.bounds.size.height
     
     @Published var dataInicial: Date
-    @Published var dias: [Int : [Bool]]
-    @Published var diasModel: [DiaModel] = []
+    @Published var dias: [DiaModel] = []
     
     var dateComponents = DateComponents()
     
@@ -25,37 +24,24 @@ class ViewModel: ObservableObject {
         self.dateComponents.timeZone = TimeZone.current
         self.dateComponents.calendar = Calendar.current
         verificarDiaAtual()
-        dictParaStruct()
+    }
+    
+    public func atualizarTarefa(numeroDia: Int, indexTarefa: Int){
+        dias[numeroDia - 1].tarefas[indexTarefa].concluida.toggle()
+        dias[numeroDia - 1].definirImagem()
+        salvarDados()
     }
     
     public func salvarDados(){
-        atualizarStructParaDict()
         dados.atualizarDias(dias: self.dias)
     }
-    
-    private func atualizarStructParaDict(){
-        for dia in diasModel {
-            var tarefasBool: [Bool] = []
-            for tarefa in dia.tarefas {
-                tarefasBool.append(tarefa.concluida)
-            }
-            self.dias[dia.numero] = tarefasBool
-        }
-    }
-    
-    private func dictParaStruct(){
-        for dia in self.dias.keys {
-            diasModel.append(.init(dia: dia, tarefas: dias[dia] ?? [false]))
-        }
-    }
-    
+   
     private func verificarDiaAtual(){
         let diaAtualCultivo: Int = dateComponents.calendar!.numberOfDaysBetween(dataInicial, to: Date())
-        print(dias)
-        if diaAtualCultivo > dias.keys.count {
+        if diaAtualCultivo > dias.count {
             while dias.count < diaAtualCultivo {
                 let tarefasNovoDia = designarTarefas(dia: dias.count + 1)
-                dias[dias.count + 1] = tarefasNovoDia
+                dias.append(.init(dia: dias.count + 1, tarefas: tarefasNovoDia))
             }
             print("Numero do dia de cultivo atual: \(diaAtualCultivo)")
             print("Dias: \(dias)")

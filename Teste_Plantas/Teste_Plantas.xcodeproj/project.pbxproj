@@ -25,7 +25,7 @@
 		DF7E515829D3B700001553D3 /* TarefaRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7E515729D3B700001553D3 /* TarefaRowView.swift */; };
 		DF7E515A29D3C34A001553D3 /* TarefaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7E515929D3C34A001553D3 /* TarefaModel.swift */; };
 		DFCACD2A29D30B33007F8838 /* BotaoHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCACD2929D30B33007F8838 /* BotaoHome.swift */; };
-		EBFD5C5E29D22CE10013A8A2 /* CardPlantaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFD5C5D29D22CE10013A8A2 /* CardPlantaView.swift */; };
+		EBFD5C5E29D22CE10013A8A2 /* GridCellPlantaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFD5C5D29D22CE10013A8A2 /* GridCellPlantaView.swift */; };
 		EBFD5C6029D22CF90013A8A2 /* DiaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFD5C5F29D22CF90013A8A2 /* DiaModel.swift */; };
 		EBFD5C6229D232080013A8A2 /* PlantaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFD5C6129D232080013A8A2 /* PlantaView.swift */; };
 		EBFD5C6629D318B00013A8A2 /* BotaoPadraoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFD5C6529D318B00013A8A2 /* BotaoPadraoView.swift */; };
@@ -52,7 +52,7 @@
 		DF7E515729D3B700001553D3 /* TarefaRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarefaRowView.swift; sourceTree = "<group>"; };
 		DF7E515929D3C34A001553D3 /* TarefaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarefaModel.swift; sourceTree = "<group>"; };
 		DFCACD2929D30B33007F8838 /* BotaoHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoHome.swift; sourceTree = "<group>"; };
-		EBFD5C5D29D22CE10013A8A2 /* CardPlantaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPlantaView.swift; sourceTree = "<group>"; };
+		EBFD5C5D29D22CE10013A8A2 /* GridCellPlantaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCellPlantaView.swift; sourceTree = "<group>"; };
 		EBFD5C5F29D22CF90013A8A2 /* DiaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaModel.swift; sourceTree = "<group>"; };
 		EBFD5C6129D232080013A8A2 /* PlantaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantaView.swift; sourceTree = "<group>"; };
 		EBFD5C6529D318B00013A8A2 /* BotaoPadraoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoPadraoView.swift; sourceTree = "<group>"; };
@@ -148,7 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				DFCACD2929D30B33007F8838 /* BotaoHome.swift */,
-				EBFD5C5D29D22CE10013A8A2 /* CardPlantaView.swift */,
+				EBFD5C5D29D22CE10013A8A2 /* GridCellPlantaView.swift */,
 				DF7E515729D3B700001553D3 /* TarefaRowView.swift */,
 				EBFD5C6529D318B00013A8A2 /* BotaoPadraoView.swift */,
 				EBFD5C6729D327260013A8A2 /* NavigationLinkPadrao.swift */,
@@ -227,7 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF0E348B29D35F76002E6024 /* SobreView.swift in Sources */,
-				EBFD5C5E29D22CE10013A8A2 /* CardPlantaView.swift in Sources */,
+				EBFD5C5E29D22CE10013A8A2 /* GridCellPlantaView.swift in Sources */,
 				A7413FAB29D2172B0012CBCD /* DiarioView.swift in Sources */,
 				DF76230A29D2219C0098A069 /* ViewModel.swift in Sources */,
 				DF7E515829D3B700001553D3 /* TarefaRowView.swift in Sources */,

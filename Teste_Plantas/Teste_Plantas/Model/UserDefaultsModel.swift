@@ -10,7 +10,7 @@ import Foundation
 class UserDefaultsModel {
     var userDefaults = UserDefaults.standard
     var dataInicial: Date = Date()
-    var dias: [Int : [Bool]] = [:]
+    var dias: [DiaModel] = []
     
     init(){
 //        clearDataBase()
@@ -25,9 +25,9 @@ class UserDefaultsModel {
         userDefaults.set(data, forKey: "DataInicial")
     }
     
-    public func atualizarDias(dias: [Int : [Bool]]){
+    public func atualizarDias(dias: [DiaModel]){
         do {
-            let encodedData: Data = try NSKeyedArchiver.archivedData(withRootObject: dias, requiringSecureCoding: false)
+            let encodedData = try JSONEncoder().encode(dias)
             userDefaults.set(encodedData, forKey: "Dias")
         }
         catch {
@@ -42,19 +42,18 @@ class UserDefaultsModel {
     }
     
     func receberDias() {
-        guard let load = userDefaults.dictionary(forKey: "Dias") as? [Int: [Bool]] else { return }
-        dias = load
-//        do{
-//            let decodeDict = try NSKeyedUnarchiver.unarchivedObject(ofClass: NSDictionary.self, from: load)
-//            dias = decodeDict as! [Int : [Bool]]
-//        } catch{
-//            print(error)
-//        }
+        guard let load = userDefaults.object(forKey: "Dias") as? Data else { return }
+        do{
+            let diasDecodados = try JSONDecoder().decode([DiaModel].self, from: load)
+            dias = diasDecodados
+        } catch{
+            print(error)
+        }
         
     }
     
     func clearDataBase(){
-        userDefaults.set(nil, forKey: "DataInicial")
-        userDefaults.set(nil, forKey: "Dias")
+        userDefaults.removeObject(forKey: "DataInicial")
+        userDefaults.removeObject(forKey: "Dias")
     }
 }

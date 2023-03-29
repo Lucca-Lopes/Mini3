@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TarefaModel: Hashable {
+struct TarefaModel: Hashable, Codable {
     let titulo: String
     var concluida: Bool
 }

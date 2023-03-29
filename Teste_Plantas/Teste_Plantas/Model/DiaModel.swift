@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DiaModel: Hashable {
+struct DiaModel: Hashable, Codable {
     let numero: Int
     var tarefas: [TarefaModel] = []
     var imagem: String = "" // girassol1 == planta morrendo, girassol2 == planta medio triste, girassol3 == planta feliz
@@ -26,10 +26,8 @@ struct DiaModel: Hashable {
             return [.init(titulo: "Coloque no Sol", concluida: tarefas[0]), .init(titulo: "Veja a água", concluida: tarefas[1])]
         default:
             switch dia % 7 {
-            case 4:
+            case 1, 4:
                 return [.init(titulo: "Veja a água", concluida: tarefas[0]), .init(titulo: "Procure Pragas", concluida: tarefas[1])]
-            case 6:
-                return [.init(titulo: "Veja a água", concluida: tarefas[0]), .init(titulo: "A planta está bonita?", concluida: tarefas[1])]
             default:
                 return [.init(titulo: "Veja a água", concluida: tarefas[0])]
             }
