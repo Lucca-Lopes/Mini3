@@ -30,6 +30,7 @@
 		DF7E515829D3B700001553D3 /* TarefaRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7E515729D3B700001553D3 /* TarefaRowView.swift */; };
 		DF7E515A29D3C34A001553D3 /* TarefaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7E515929D3C34A001553D3 /* TarefaModel.swift */; };
 		DFCACD2A29D30B33007F8838 /* BotaoHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCACD2929D30B33007F8838 /* BotaoHome.swift */; };
+		DFE18A6B29D5026A009E4852 /* Purple Smile.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DFE18A6A29D5026A009E4852 /* Purple Smile.ttf */; };
 		EBFD5C5E29D22CE10013A8A2 /* GridCellPlantaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFD5C5D29D22CE10013A8A2 /* GridCellPlantaView.swift */; };
 		EBFD5C6029D22CF90013A8A2 /* DiaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFD5C5F29D22CF90013A8A2 /* DiaModel.swift */; };
 		EBFD5C6229D232080013A8A2 /* PlantaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFD5C6129D232080013A8A2 /* PlantaView.swift */; };
@@ -62,6 +63,8 @@
 		DF7E515729D3B700001553D3 /* TarefaRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarefaRowView.swift; sourceTree = "<group>"; };
 		DF7E515929D3C34A001553D3 /* TarefaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarefaModel.swift; sourceTree = "<group>"; };
 		DFCACD2929D30B33007F8838 /* BotaoHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoHome.swift; sourceTree = "<group>"; };
+		DFE18A6A29D5026A009E4852 /* Purple Smile.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Purple Smile.ttf"; sourceTree = "<group>"; };
+		DFE18A6C29D5029C009E4852 /* Teste-Plantas-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Teste-Plantas-Info.plist"; sourceTree = SOURCE_ROOT; };
 		EBFD5C5D29D22CE10013A8A2 /* GridCellPlantaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCellPlantaView.swift; sourceTree = "<group>"; };
 		EBFD5C5F29D22CF90013A8A2 /* DiaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaModel.swift; sourceTree = "<group>"; };
 		EBFD5C6129D232080013A8A2 /* PlantaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantaView.swift; sourceTree = "<group>"; };
@@ -99,6 +102,8 @@
 		A7413F9329CE15780012CBCD /* Teste_Plantas */ = {
 			isa = PBXGroup;
 			children = (
+				DFE18A6C29D5029C009E4852 /* Teste-Plantas-Info.plist */,
+				DFE18A6A29D5026A009E4852 /* Purple Smile.ttf */,
 				A772E6DF29D4CF73006CC399 /* videoSol.mp4 */,
 				A7413F9429CE15780012CBCD /* Teste_PlantasApp.swift */,
 				DF76230329D217010098A069 /* Model */,
@@ -161,10 +166,9 @@
 			children = (
 				DFCACD2929D30B33007F8838 /* BotaoHome.swift */,
 				A772E6CC29D37A31006CC399 /* BotaoConfigAprenda.swift */,
-				EBFD5C5D29D22CE10013A8A2 /* GridCellPlantaView.swift */,
 				DF7E515729D3B700001553D3 /* TarefaRowView.swift */,
 				EBFD5C6529D318B00013A8A2 /* BotaoPadraoView.swift */,
-				EBFD5C5D29D22CE10013A8A2 /* CardPlantaView.swift */,
+				EBFD5C5D29D22CE10013A8A2 /* GridCellPlantaView.swift */,
 				EBFD5C6729D327260013A8A2 /* NavigationLinkPadrao.swift */,
 				A772E6D629D3CFC5006CC399 /* CardAnimationView.swift */,
 				DF38251B29D4C642002F35E8 /* CardInicioCultivoView.swift */,
@@ -232,6 +236,7 @@
 			files = (
 				A7413F9C29CE15790012CBCD /* Preview Assets.xcassets in Resources */,
 				A772E6E029D4CF73006CC399 /* videoSol.mp4 in Resources */,
+				DFE18A6B29D5026A009E4852 /* Purple Smile.ttf in Resources */,
 				A7413F9929CE15790012CBCD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,7 +269,7 @@
 				DF7E515A29D3C34A001553D3 /* TarefaModel.swift in Sources */,
 				A7413F9529CE15780012CBCD /* Teste_PlantasApp.swift in Sources */,
 				A772E6D329D3BF10006CC399 /* DetalheAprendaCuidarView.swift in Sources */,
-				EBFD5C6029D22CF90013A8A2 /* CardPlantaModel.swift in Sources */,
+				EBFD5C6029D22CF90013A8A2 /* DiaModel.swift in Sources */,
 				EBFD5C6029D22CF90013A8A2 /* DiaModel.swift in Sources */,
 				DF0E348D29D35FB4002E6024 /* PrivacidadeView.swift in Sources */,
 				DF0E348F29D35FCD002E6024 /* DireitosView.swift in Sources */,
@@ -400,6 +405,7 @@
 				DEVELOPMENT_TEAM = RRUDNBUBWM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Teste-Plantas-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -433,6 +439,7 @@
 				DEVELOPMENT_TEAM = RRUDNBUBWM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Teste-Plantas-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

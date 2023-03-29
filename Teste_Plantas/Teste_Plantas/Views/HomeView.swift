@@ -15,27 +15,37 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             VStack{
-                BotaoHome(screenHeight: screenHeight, screenWidth: screenWidth, nextView: DiarioView(), nomeIcone: "book.fill", textoBotao: "Diário")
+                BotaoHome(screenHeight: screenHeight, screenWidth: screenWidth, nextView: DiarioView(), nomeIcone: "girassolOculos", textoBotao: "Diário", imagemWidth: screenWidth * 0.4, imagemHeight: screenHeight * 0.25, tamanhoFonte: 36)
                 .padding(.vertical, 50)
-                BotaoHome(screenHeight: screenHeight, screenWidth: screenWidth, nextView: AprendaCuidarView(), nomeIcone: "camera.macro", textoBotao: "Aprenda a cuidar")
+                BotaoHome(screenHeight: screenHeight, screenWidth: screenWidth, nextView: AprendaCuidarView(), nomeIcone: "girassolAgua", textoBotao: "Aprenda a cuidar", imagemWidth: screenWidth * 0.4, imagemHeight: screenHeight * 0.25, tamanhoFonte: 30)
             }
             .toolbar{
-                ToolbarItem {
-                    Text("Plantee")
-                        .font(.system(size: 32))
-                        .fontWeight(.heavy)
-                        .frame(width: screenWidth * 0.715, alignment: .center)
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Text("Gira")
+                        .font(.custom("Purple Smile", size: 40))
+                        .fontWeight(.regular)
+                        .foregroundColor(Color("corFundoBotao"))
+                        .padding(.leading, 20)
+//                        .frame(width: screenWidth * 0.64, alignment: .center)
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink(destination: {
                         ConfigView()
                     }, label: {
-                        Image(systemName: "info.circle")
+                        Image("botaoInfo")
+                            .resizable()
+                            .frame(width: screenWidth * 0.1, height: screenWidth * 0.1)
                     })
                 }
             }
+            .background {
+                Image("backgroundImage")
+                    .resizable()
+                    .ignoresSafeArea()
+                    .frame(width: screenWidth, height: screenHeight * 1.15, alignment: .center)
+            }
 //            .navigationTitle("Naturee")
-            .navigationBarTitleDisplayMode(.inline)
+//            .navigationBarTitleDisplayMode(.inline)
         }
         
     }

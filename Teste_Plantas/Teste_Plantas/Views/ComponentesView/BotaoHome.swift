@@ -14,6 +14,9 @@ struct BotaoHome<TargetView: View>: View {
     let nextView: TargetView
     let nomeIcone: String
     let textoBotao: String
+    let imagemWidth: CGFloat
+    let imagemHeight: CGFloat
+    let tamanhoFonte: CGFloat
     
     var body: some View {
         NavigationLink(destination: {
@@ -21,22 +24,24 @@ struct BotaoHome<TargetView: View>: View {
         }, label: {
             ZStack{
                 RoundedRectangle(cornerRadius: 25)
-                    .frame(height: screenHeight * 0.3, alignment: .center)
-                    .padding(.horizontal)
-                    .foregroundColor(.green)
+                    .frame(width: screenWidth * 0.85, height: screenHeight * 0.25, alignment: .center)
+                    .shadow(radius: 4, x: 0, y: 4)
+                    .foregroundColor(Color("corFundoBotao"))
                     
                 HStack {
-                    Image(systemName: nomeIcone)
+                    Image(nomeIcone)
                         .resizable()
-                        .frame(width: screenWidth * 0.2, height: screenHeight * 0.075)
-                        .padding(.leading, 50)
+                        .frame(width: imagemWidth, height: imagemHeight, alignment: .center)
+                        .padding(.leading, 40)
                         .foregroundColor(.black)
                     Spacer()
                     Text(textoBotao)
-                        .frame(width: screenWidth * 0.5, alignment: .center)
-                        .font(.system(size: 36))
-                        .padding(.trailing, 50)
-                        .foregroundColor(.black)
+//                        .frame(width: screenWidth * 0.5, alignment: .center)
+                        .font(.custom("Purple Smile", size: tamanhoFonte))
+                        .kerning(0.5)
+                        .padding(.trailing, 35)
+                        .foregroundColor(Color("corTexto"))
+                    Spacer()
                 }
             }
         })
