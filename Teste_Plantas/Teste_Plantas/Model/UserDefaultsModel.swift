@@ -11,6 +11,7 @@ class UserDefaultsModel {
     var userDefaults = UserDefaults.standard
     var dataInicial: Date = Date()
     var dias: [DiaModel] = []
+    var cultivoIniciado: Bool = false
     
     init(){
 //        clearDataBase()
@@ -18,7 +19,12 @@ class UserDefaultsModel {
             let data: Date = Date()
             definirData(data: data)
         }
+        receberCultivoIniciado()
         receberDias()
+    }
+    
+    public func definirCultivoIniciado(cultivoIniciado: Bool){
+        userDefaults.set(cultivoIniciado, forKey: "CultivoIniciado")
     }
     
     public func definirData(data: Date){
@@ -33,6 +39,11 @@ class UserDefaultsModel {
         catch {
             print(error)
         }
+    }
+    
+    func receberCultivoIniciado(){
+        guard let load = userDefaults.object(forKey: "CultivoIniciado") as? Bool else { return }
+        cultivoIniciado = load
     }
     
     func receberData() -> Bool {

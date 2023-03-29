@@ -14,16 +14,23 @@ class ViewModel: ObservableObject {
     public let screenHeight = UIScreen.main.bounds.size.height
     
     @Published var dataInicial: Date
+    @Published var cultivoIniciado: Bool
     @Published var dias: [DiaModel] = []
     
     var dateComponents = DateComponents()
     
     public init() {
         self.dataInicial = dados.dataInicial
+        self.cultivoIniciado = dados.cultivoIniciado
         self.dias = dados.dias
         self.dateComponents.timeZone = TimeZone.current
         self.dateComponents.calendar = Calendar.current
         verificarDiaAtual()
+    }
+    
+    public func iniciarCultivo(cultivoIniciado: Bool){
+        self.cultivoIniciado = cultivoIniciado
+        self.dados.definirCultivoIniciado(cultivoIniciado: cultivoIniciado)
     }
     
     public func atualizarTarefa(numeroDia: Int, indexTarefa: Int){
