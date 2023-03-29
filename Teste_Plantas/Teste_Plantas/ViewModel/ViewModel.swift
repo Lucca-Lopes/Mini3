@@ -8,13 +8,14 @@
 import SwiftUI
 
 class ViewModel: ObservableObject {
-    private var dados = UDModel()
+    private var dados = UserDefaultsModel()
     
     public let screenWidth = UIScreen.main.bounds.size.width
     public let screenHeight = UIScreen.main.bounds.size.height
     
     @Published var dataInicial: Date
-    @Published var dias: [Int : [Bool]]
+    @Published var dias: [DiaModel] = []
+    
     var dateComponents = DateComponents()
     
     public init() {
@@ -25,32 +26,32 @@ class ViewModel: ObservableObject {
         verificarDiaAtual()
     }
     
+    public func atualizarTarefa(numeroDia: Int, indexTarefa: Int){
+        dias[numeroDia - 1].tarefas[indexTarefa].concluida.toggle()
+        dias[numeroDia - 1].definirImagem()
+        salvarDados()
+    }
+    
+    public func salvarDados(){
+        dados.atualizarDias(dias: self.dias)
+    }
+   
     private func verificarDiaAtual(){
         let diaAtualCultivo: Int = dateComponents.calendar!.numberOfDaysBetween(dataInicial, to: Date())
-        if diaAtualCultivo > dias.keys.count {
-            while dias.count <= diaAtualCultivo {
-                let tarefasNovoDia = designarTarefas(dia: dias.count)
-                dias.updateValue(tarefasNovoDia, forKey: dias.count)
+        if diaAtualCultivo > dias.count {
+            while dias.count < diaAtualCultivo {
+                let tarefasNovoDia = designarTarefas(dia: dias.count + 1)
+                dias.append(.init(dia: dias.count + 1, tarefas: tarefasNovoDia))
             }
             print("Numero do dia de cultivo atual: \(diaAtualCultivo)")
-            print(dias)
+            print("Dias: \(dias)")
         }
     }
     private func designarTarefas(dia: Int) -> [Bool] {
         switch dia % 7 {
-        case 0:
-            return [false]
         case 1:
             return [false, false, false]
-        case 2:
-            return [false, false]
-        case 3:
-            return [false]
-        case 4:
-            return [false, false]
-        case 5:
-            return [false]
-        case 6:
+        case 2, 4, 6:
             return [false, false]
         default:
             return [false]
