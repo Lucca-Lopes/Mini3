@@ -11,8 +11,8 @@ import SwiftUI
 struct Teste_PlantasApp: App {
     var body: some Scene {
         WindowGroup {
-            SplashScreen()
-//            ContentView()
+//            SplashScreen()
+            ContentView()
         }
     }
 }

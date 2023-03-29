@@ -15,7 +15,7 @@ struct PlantaView: View {
             ScrollView {
                 LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
                     ForEach(plantas, id: \.id) { planta in
-                        CardPlantaView(cardPlantaModel: planta)
+                        CardPlantaView(cardPlantaModel: planta, destination: AnyView(DiarioView()))
                     }
                 }
                 BotaoPadraoView(
