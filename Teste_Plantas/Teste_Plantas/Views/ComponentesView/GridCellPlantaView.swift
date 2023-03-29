@@ -15,9 +15,6 @@ struct GridCellPlantaView: View {
     
     let numeroDia: Int
     
-    let cardWidth = UIScreen.main.bounds.width / 2.5
-    let cardHeight = UIScreen.main.bounds.width / 2.5
-    
     var body: some View {
         NavigationLink(destination: DetalheDiaView(vm: vm, numeroDia: numeroDia)) {
             ZStack {
@@ -28,11 +25,18 @@ struct GridCellPlantaView: View {
                     .padding(.vertical, 10)
                 VStack {
                     Image(vm.dias[numeroDia - 1].imagem)
-                        .padding()
+                        .resizable()
+                        .frame(width: vm.screenWidth * 0.25, height: vm.screenHeight * 0.25)
+                        
+//                        .padding()
+                    Rectangle()
+                        .frame(width: vm.screenWidth * 0.44, height: vm.screenHeight * 0.001)
+                        .foregroundColor(.black)
+//                        .padding(.top)
                     Text("Dia \(vm.dias[numeroDia - 1].numero)")
                         .font(.title)
                         .fontWeight(.bold)
-                        .padding()
+                        .padding(2.5)
                     //            cardPlantaModel.imagem
                     //                .resizable()
                     //                .aspectRatio(contentMode: .fill)

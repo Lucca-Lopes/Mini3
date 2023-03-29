@@ -42,13 +42,13 @@ struct DiaModel: Hashable, Codable {
             }
         }
         if contadorFalhas == tarefas.count {
-            self.imagem = "girassol1"
+            self.imagem = "girassolTriste"
         }
         else if contadorFalhas > 0 && contadorFalhas < tarefas.count {
-            self.imagem = "girassol2"
+            self.imagem = "girassolNeutro"
         }
         else {
-            self.imagem = "girassol3"
+            self.imagem = "girassolFeliz"
         }
     }
 }

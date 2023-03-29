@@ -11,10 +11,9 @@ import AVKit
 struct CardAnimationView: View {
     let screenWidth = UIScreen.main.bounds.size.width
     let screenHeight = UIScreen.main.bounds.size.height
-//    let videoPlayer: String
+    
     let textoDescricao: String
     let nomeVideo: String
-    
     var videoPlayer: AVPlayer
     
     init(textoDescricao: String, nomeVideo: String) {
@@ -22,9 +21,7 @@ struct CardAnimationView: View {
         self.nomeVideo = nomeVideo
         self.videoPlayer = AVPlayer(url: Bundle.main.url(forResource: nomeVideo, withExtension: "mp4")!)
     }
-    
-//    @State var videoPlayer = AVPlayer(url: Bundle.main.url(forResource: "videoSol", withExtension: "mp4")!)
-    
+        
     var body: some View {
         ZStack {
             VStack {

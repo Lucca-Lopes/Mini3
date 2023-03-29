@@ -65,7 +65,8 @@ class UserDefaultsModel {
     }
     
     func clearDataBase(){
-        userDefaults.removeObject(forKey: "DataInicial")
+//        userDefaults.removeObject(forKey: "DataInicial")
+//        userDefaults.removeObject(forKey: "CultivoIniciado")
         userDefaults.removeObject(forKey: "Dias")
     }
 }
