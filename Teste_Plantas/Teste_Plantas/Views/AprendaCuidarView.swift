@@ -10,56 +10,20 @@ import SwiftUI
 struct AprendaCuidarView: View {
     var body: some View {
         VStack{
-            NavigationLink(destination:{
-                ContentView() //chamar tela certa
-            }, label: {
-                Text("Rega")
-                    .font(.system(size: 20, weight: .semibold))
-                    .foregroundColor(.brown)
-                    .frame(width: 200, height: 100)
-                    .background(
-                        Color.yellow
-                            .cornerRadius(10)
-                            .shadow(radius: 8)
-                        )
-                    .padding()
-            })
+            BotaoConfigAprenda(nextView: DetalheAprendaCuidarView(nomeView: "Rega", textoDescricao: "Seu girassol precisa de água", nomeVideo: "videoSol"), nomeIcone: "drop", textoBotao: "Umidade da terra") //chamar telas certas
             
-            NavigationLink(destination: {
-                ContentView() //chamar tela certa
-            }, label: {
-                Text("Sol")
-                    .font(.system(size: 20, weight: .semibold))
-                    .foregroundColor(.brown)
-                    .frame(width: 200, height: 100)
-                    .background(
-                        Color.yellow
-                            .cornerRadius(10)
-                            .shadow(radius: 8)
-                        )
-                    .padding()
-            })
+            BotaoConfigAprenda(nextView: DetalheAprendaCuidarView(nomeView: "Sol", textoDescricao: "Seu girassol adora sol!", nomeVideo: "videoSol"), nomeIcone: "sun.max", textoBotao: "Sol")
             
-            NavigationLink(destination: {
-                ContentView() //chamar tela certa
-           }, label: {
-               Text("Saúde")
-                   .font(.system(size: 20, weight: .semibold))
-                   .foregroundColor(.brown)
-                   .frame(width: 200, height: 100)
-                   .background(
-                       Color.yellow
-                           .cornerRadius(10)
-                           .shadow(radius: 8)
-                       )
-                   .padding()
-           })
+            BotaoConfigAprenda(nextView: DetalheAprendaCuidarView(nomeView: "Pragas", textoDescricao: "Tire as pragas do seu girassol", nomeVideo: "videoSol"), nomeIcone: "ant", textoBotao: "Procure pragas") //chamar telas certas
         }
+        .navigationTitle("Aprenda a cuidar")
+        .navigationBarTitleDisplayMode(.automatic)
     }
 }
 
-//struct MiniGameView_Previews: PreviewProvider {
+
+//struct AprendaCuidarView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        MiniGameView()
+//        AprendaCuidarView()
 //    }
 //}
