@@ -22,7 +22,6 @@
 		DF76230729D21EDD0098A069 /* UDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76230629D21EDD0098A069 /* UDModel.swift */; };
 		DF76230A29D2219C0098A069 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76230929D2219C0098A069 /* ViewModel.swift */; };
 		DFCACD2A29D30B33007F8838 /* BotaoHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCACD2929D30B33007F8838 /* BotaoHome.swift */; };
-		EB2603F829D3B8970058C849 /* CardPlantaInicioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2603F729D3B8970058C849 /* CardPlantaInicioView.swift */; };
 		EBFD5C5E29D22CE10013A8A2 /* CardPlantaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFD5C5D29D22CE10013A8A2 /* CardPlantaView.swift */; };
 		EBFD5C6029D22CF90013A8A2 /* CardPlantaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFD5C5F29D22CF90013A8A2 /* CardPlantaModel.swift */; };
 		EBFD5C6229D232080013A8A2 /* PlantaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFD5C6129D232080013A8A2 /* PlantaView.swift */; };
@@ -47,7 +46,6 @@
 		DF76230629D21EDD0098A069 /* UDModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDModel.swift; sourceTree = "<group>"; };
 		DF76230929D2219C0098A069 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		DFCACD2929D30B33007F8838 /* BotaoHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoHome.swift; sourceTree = "<group>"; };
-		EB2603F729D3B8970058C849 /* CardPlantaInicioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPlantaInicioView.swift; sourceTree = "<group>"; };
 		EBFD5C5D29D22CE10013A8A2 /* CardPlantaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPlantaView.swift; sourceTree = "<group>"; };
 		EBFD5C5F29D22CF90013A8A2 /* CardPlantaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPlantaModel.swift; sourceTree = "<group>"; };
 		EBFD5C6129D232080013A8A2 /* PlantaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantaView.swift; sourceTree = "<group>"; };
@@ -145,7 +143,6 @@
 				EBFD5C5D29D22CE10013A8A2 /* CardPlantaView.swift */,
 				EBFD5C6529D318B00013A8A2 /* BotaoPadraoView.swift */,
 				EBFD5C6729D327260013A8A2 /* NavigationLinkPadrao.swift */,
-				EB2603F729D3B8970058C849 /* CardPlantaInicioView.swift */,
 			);
 			path = ComponentesView;
 			sourceTree = "<group>";
@@ -235,7 +232,6 @@
 				EBFD5C6829D327260013A8A2 /* NavigationLinkPadrao.swift in Sources */,
 				EBFD5C6629D318B00013A8A2 /* BotaoPadraoView.swift in Sources */,
 				A7413F9529CE15780012CBCD /* Teste_PlantasApp.swift in Sources */,
-				EB2603F829D3B8970058C849 /* CardPlantaInicioView.swift in Sources */,
 				EBFD5C6029D22CF90013A8A2 /* CardPlantaModel.swift in Sources */,
 				DF0E348D29D35FB4002E6024 /* PrivacidadeView.swift in Sources */,
 				DF0E348F29D35FCD002E6024 /* DireitosView.swift in Sources */,
