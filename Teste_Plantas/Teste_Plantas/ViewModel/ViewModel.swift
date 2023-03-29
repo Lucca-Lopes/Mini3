@@ -8,14 +8,15 @@
 import SwiftUI
 
 class ViewModel: ObservableObject {
-    private var dados = UDModel()
+    private var dados = UserDefaultsModel()
     
     public let screenWidth = UIScreen.main.bounds.size.width
     public let screenHeight = UIScreen.main.bounds.size.height
     
     @Published var dataInicial: Date
     @Published var dias: [Int : [Bool]]
-    @Published var diasModel: [CardPlantaModel] = []
+    @Published var diasModel: [DiaModel] = []
+    
     var dateComponents = DateComponents()
     
     public init() {
@@ -24,21 +25,37 @@ class ViewModel: ObservableObject {
         self.dateComponents.timeZone = TimeZone.current
         self.dateComponents.calendar = Calendar.current
         verificarDiaAtual()
-        dictParaStruct(dicionario: self.dias)
+        dictParaStruct()
     }
     
-    private func dictParaStruct(dicionario: [Int:[Bool]]){
-        for dia in dicionario.keys {
-            diasModel.append(.init(dia: dia, tarefas: dicionario[dia] ?? [false]))
+    public func salvarDados(){
+        atualizarStructParaDict()
+        dados.atualizarDias(dias: self.dias)
+    }
+    
+    private func atualizarStructParaDict(){
+        for dia in diasModel {
+            var tarefasBool: [Bool] = []
+            for tarefa in dia.tarefas {
+                tarefasBool.append(tarefa.concluida)
+            }
+            self.dias[dia.numero] = tarefasBool
+        }
+    }
+    
+    private func dictParaStruct(){
+        for dia in self.dias.keys {
+            diasModel.append(.init(dia: dia, tarefas: dias[dia] ?? [false]))
         }
     }
     
     private func verificarDiaAtual(){
         let diaAtualCultivo: Int = dateComponents.calendar!.numberOfDaysBetween(dataInicial, to: Date())
+        print(dias)
         if diaAtualCultivo > dias.keys.count {
             while dias.count < diaAtualCultivo {
                 let tarefasNovoDia = designarTarefas(dia: dias.count + 1)
-                dias.updateValue(tarefasNovoDia, forKey: dias.count + 1)
+                dias[dias.count + 1] = tarefasNovoDia
             }
             print("Numero do dia de cultivo atual: \(diaAtualCultivo)")
             print("Dias: \(dias)")
@@ -46,19 +63,9 @@ class ViewModel: ObservableObject {
     }
     private func designarTarefas(dia: Int) -> [Bool] {
         switch dia % 7 {
-        case 0:
-            return [false]
         case 1:
             return [false, false, false]
-        case 2:
-            return [false, false]
-        case 3:
-            return [false]
-        case 4:
-            return [false, false]
-        case 5:
-            return [false]
-        case 6:
+        case 2, 4, 6:
             return [false, false]
         default:
             return [false]
