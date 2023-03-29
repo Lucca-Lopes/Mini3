@@ -15,12 +15,13 @@ class UserDefaultsModel {
     
     init(){
 //        clearDataBase()
-        if !receberData() {
+        receberCultivoIniciado()
+        receberDias()
+        
+        if !receberData() && cultivoIniciado {
             let data: Date = Date()
             definirData(data: data)
         }
-        receberCultivoIniciado()
-        receberDias()
     }
     
     public func definirCultivoIniciado(cultivoIniciado: Bool){
