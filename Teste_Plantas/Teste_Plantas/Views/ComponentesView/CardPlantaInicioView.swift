@@ -16,7 +16,7 @@ struct CardPlantaInicioView: View {
     var body: some View {
         let screenWidth = UIScreen.main.bounds.width
         let screenHeight = UIScreen.main.bounds.height
-        
+     
         ZStack {
             VStack {
                 Text(title)
@@ -41,20 +41,16 @@ struct CardPlantaInicioView: View {
             
             VStack {
                 Spacer()
-                BotaoPadraoView(
-                    action:{
-                        NavigationLink(destination: PlantaView()) {
-                            
-                        }
-                    },
-                    title: "Plantar",
-                    foregrounColor: .black,
-                    font: .system(size: 18, weight: .semibold),
-                    padding: 18,
-                    backgroundColor: (Color.gray.opacity(0.5)),
-                    cornerRadius: 26,
-                    width: 240,
-                    height: 70)
+                NavigationLink(destination: PlantaView()) {
+                    Text("Plantar")
+                        .foregroundColor(.black)
+                        .font(.title)
+                        .padding(40)
+                        .frame(width: 200, height: 60)
+                        .background(.gray)
+                        .cornerRadius(15)
+                }
+                
             }
             .frame(height: 450)
             

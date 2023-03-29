@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BotaoPadraoView: View {
-    let action: () -> Void
+//    let action: () -> Void
     let title: String
     let foregrounColor: Color
     let font: Font
@@ -20,11 +20,11 @@ struct BotaoPadraoView: View {
     
     
     var body: some View {
-        Button(action: action) {
+//        Button(action: action) {
             Text(title)
                 .foregroundColor(foregrounColor)
                 .font(font)
-        }
+//        }
         .padding(padding)
         .frame(width: width, height: height)
         .background(backgroundColor)

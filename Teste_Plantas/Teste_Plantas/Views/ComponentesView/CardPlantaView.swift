@@ -27,9 +27,8 @@ struct CardPlantaView: View {
                 
                 
                 Rectangle()
-                    .frame(height: 1)
+                    .frame(width: 1, height: 1)
                     .foregroundColor(Color.black)
-                    .padding(.horizontal)
                 
                 
                 //            Text(cardPlantaModel.nome)
