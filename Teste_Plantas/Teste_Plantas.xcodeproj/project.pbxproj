@@ -17,6 +17,9 @@
 		A7413FAD29D217890012CBCD /* AprendaCuidarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7413FAC29D217890012CBCD /* AprendaCuidarView.swift */; };
 		A7413FAF29D2184D0012CBCD /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7413FAE29D2184D0012CBCD /* ConfigView.swift */; };
 		A772E6CD29D37A31006CC399 /* BotaoConfigAprenda.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772E6CC29D37A31006CC399 /* BotaoConfigAprenda.swift */; };
+		A772E6D329D3BF10006CC399 /* DetalheAprendaCuidarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772E6D229D3BF10006CC399 /* DetalheAprendaCuidarView.swift */; };
+		A772E6D729D3CFC5006CC399 /* CardAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772E6D629D3CFC5006CC399 /* CardAnimationView.swift */; };
+		A772E6E029D4CF73006CC399 /* videoSol.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A772E6DF29D4CF73006CC399 /* videoSol.mp4 */; };
 		DF0E348B29D35F76002E6024 /* SobreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E348A29D35F76002E6024 /* SobreView.swift */; };
 		DF0E348D29D35FB4002E6024 /* PrivacidadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E348C29D35FB4002E6024 /* PrivacidadeView.swift */; };
 		DF0E348F29D35FCD002E6024 /* DireitosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E348E29D35FCD002E6024 /* DireitosView.swift */; };
@@ -42,6 +45,9 @@
 		A7413FAC29D217890012CBCD /* AprendaCuidarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AprendaCuidarView.swift; sourceTree = "<group>"; };
 		A7413FAE29D2184D0012CBCD /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
 		A772E6CC29D37A31006CC399 /* BotaoConfigAprenda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoConfigAprenda.swift; sourceTree = "<group>"; };
+		A772E6D229D3BF10006CC399 /* DetalheAprendaCuidarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheAprendaCuidarView.swift; sourceTree = "<group>"; };
+		A772E6D629D3CFC5006CC399 /* CardAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAnimationView.swift; sourceTree = "<group>"; };
+		A772E6DF29D4CF73006CC399 /* videoSol.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = videoSol.mp4; path = ../videoSol.mp4; sourceTree = "<group>"; };
 		DF0E348A29D35F76002E6024 /* SobreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SobreView.swift; sourceTree = "<group>"; };
 		DF0E348C29D35FB4002E6024 /* PrivacidadeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacidadeView.swift; sourceTree = "<group>"; };
 		DF0E348E29D35FCD002E6024 /* DireitosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DireitosView.swift; sourceTree = "<group>"; };
@@ -85,6 +91,7 @@
 		A7413F9329CE15780012CBCD /* Teste_Plantas */ = {
 			isa = PBXGroup;
 			children = (
+				A772E6DF29D4CF73006CC399 /* videoSol.mp4 */,
 				A7413F9429CE15780012CBCD /* Teste_PlantasApp.swift */,
 				DF76230329D217010098A069 /* Model */,
 				DF76230829D221810098A069 /* ViewModel */,
@@ -133,6 +140,7 @@
 				DF0E348A29D35F76002E6024 /* SobreView.swift */,
 				DF0E348C29D35FB4002E6024 /* PrivacidadeView.swift */,
 				DF0E348E29D35FCD002E6024 /* DireitosView.swift */,
+				A772E6D229D3BF10006CC399 /* DetalheAprendaCuidarView.swift */,
 				EBFD5C5C29D22CBF0013A8A2 /* ComponentesView */,
 			);
 			path = Views;
@@ -142,10 +150,11 @@
 			isa = PBXGroup;
 			children = (
 				DFCACD2929D30B33007F8838 /* BotaoHome.swift */,
-				EBFD5C5D29D22CE10013A8A2 /* CardPlantaView.swift */,
-				EBFD5C6529D318B00013A8A2 /* BotaoPadraoView.swift */,
-				EBFD5C6729D327260013A8A2 /* NavigationLinkPadrao.swift */,
 				A772E6CC29D37A31006CC399 /* BotaoConfigAprenda.swift */,
+				EBFD5C6529D318B00013A8A2 /* BotaoPadraoView.swift */,
+				EBFD5C5D29D22CE10013A8A2 /* CardPlantaView.swift */,
+				EBFD5C6729D327260013A8A2 /* NavigationLinkPadrao.swift */,
+				A772E6D629D3CFC5006CC399 /* CardAnimationView.swift */,
 			);
 			path = ComponentesView;
 			sourceTree = "<group>";
@@ -209,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7413F9C29CE15790012CBCD /* Preview Assets.xcassets in Resources */,
+				A772E6E029D4CF73006CC399 /* videoSol.mp4 in Resources */,
 				A7413F9929CE15790012CBCD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,6 +233,7 @@
 				DF0E348B29D35F76002E6024 /* SobreView.swift in Sources */,
 				EBFD5C5E29D22CE10013A8A2 /* CardPlantaView.swift in Sources */,
 				A7413FAB29D2172B0012CBCD /* DiarioView.swift in Sources */,
+				A772E6D729D3CFC5006CC399 /* CardAnimationView.swift in Sources */,
 				DF76230A29D2219C0098A069 /* ViewModel.swift in Sources */,
 				DFCACD2A29D30B33007F8838 /* BotaoHome.swift in Sources */,
 				A7413FAD29D217890012CBCD /* AprendaCuidarView.swift in Sources */,
@@ -236,6 +247,7 @@
 				EBFD5C6829D327260013A8A2 /* NavigationLinkPadrao.swift in Sources */,
 				EBFD5C6629D318B00013A8A2 /* BotaoPadraoView.swift in Sources */,
 				A7413F9529CE15780012CBCD /* Teste_PlantasApp.swift in Sources */,
+				A772E6D329D3BF10006CC399 /* DetalheAprendaCuidarView.swift in Sources */,
 				EBFD5C6029D22CF90013A8A2 /* CardPlantaModel.swift in Sources */,
 				DF0E348D29D35FB4002E6024 /* PrivacidadeView.swift in Sources */,
 				DF0E348F29D35FCD002E6024 /* DireitosView.swift in Sources */,

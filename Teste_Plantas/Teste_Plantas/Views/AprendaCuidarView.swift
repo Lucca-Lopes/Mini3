@@ -9,19 +9,21 @@ import SwiftUI
 
 struct AprendaCuidarView: View {
     var body: some View {
-        VStack{                     //chamar telas certas
-            BotaoConfigAprenda(nextView: SobreView(), nomeIcone: "drop", textoBotao: "Umidade da terra")
+        VStack{
+            BotaoConfigAprenda(nextView: DetalheAprendaCuidarView(nomeView: "Rega", textoDescricao: "Seu girassol precisa de água", nomeVideo: "videoSol"), nomeIcone: "drop", textoBotao: "Umidade da terra") //chamar telas certas
             
-            BotaoConfigAprenda(nextView: PrivacidadeView(), nomeIcone: "sun.max", textoBotao: "Sol")
+            BotaoConfigAprenda(nextView: DetalheAprendaCuidarView(nomeView: "Sol", textoDescricao: "Seu girassol adora sol!", nomeVideo: "videoSol"), nomeIcone: "sun.max", textoBotao: "Sol")
             
-            BotaoConfigAprenda(nextView: DireitosView(), nomeIcone: "ant", textoBotao: "Procure pragas")
+            BotaoConfigAprenda(nextView: DetalheAprendaCuidarView(nomeView: "Pragas", textoDescricao: "Tire as pragas do seu girassol", nomeVideo: "videoSol"), nomeIcone: "ant", textoBotao: "Procure pragas") //chamar telas certas
         }
+        .navigationTitle("Aprenda a cuidar")
+        .navigationBarTitleDisplayMode(.automatic)
     }
 }
 
 
-//struct MiniGameView_Previews: PreviewProvider {
+//struct AprendaCuidarView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        MiniGameView()
+//        AprendaCuidarView()
 //    }
 //}

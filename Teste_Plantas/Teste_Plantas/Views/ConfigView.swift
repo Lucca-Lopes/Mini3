@@ -17,6 +17,8 @@ struct ConfigView: View {
             
             BotaoConfigAprenda(nextView: DireitosView(), nomeIcone: "c.circle", textoBotao: "Direitos Autorais")
         }
+        .navigationTitle("Informações")
+        .navigationBarTitleDisplayMode(.automatic)
     }
 }
 
