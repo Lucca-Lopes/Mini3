@@ -8,13 +8,21 @@
 import SwiftUI
 
 struct DiarioView: View {
+    
+    @ObservedObject var vm = ViewModel()
+    
     var body: some View {
-        Text("Diario aqui")
+        if vm.cultivoIniciado {
+            ScrollView {
+                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 5) {
+                    ForEach(vm.dias, id: \.numero) { dia in
+                        GridCellPlantaView(vm: vm, numeroDia: dia.numero)
+                    }
+                }
+            }
+        }
+        else {
+            CardPlantaInicioView(vm: vm, title: "Começar a cuidar", subtitle: "do girassol", imageIcone: "camera.macro")
+        }
     }
 }
-
-//struct DiarioView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DiarioView()
-//    }
-//}

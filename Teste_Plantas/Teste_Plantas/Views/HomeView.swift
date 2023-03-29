@@ -9,21 +9,22 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @ObservedObject var vm = ViewModel()
+    let screenWidth = UIScreen.main.bounds.size.width
+    let screenHeight = UIScreen.main.bounds.size.height
     
     var body: some View {
         NavigationView {
             VStack{
-                BotaoHome(screenHeight: vm.screenHeight, screenWidth: vm.screenWidth, nextView: DiarioView(), nomeIcone: "book.fill", textoBotao: "Diário")
+                BotaoHome(screenHeight: screenHeight, screenWidth: screenWidth, nextView: DiarioView(), nomeIcone: "book.fill", textoBotao: "Diário")
                 .padding(.vertical, 50)
-                BotaoHome(screenHeight: vm.screenHeight, screenWidth: vm.screenWidth, nextView: AprendaCuidarView(), nomeIcone: "camera.macro", textoBotao: "Aprenda a cuidar")
+                BotaoHome(screenHeight: screenHeight, screenWidth: screenWidth, nextView: AprendaCuidarView(), nomeIcone: "camera.macro", textoBotao: "Aprenda a cuidar")
             }
             .toolbar{
                 ToolbarItem {
                     Text("Plantee")
                         .font(.system(size: 32))
                         .fontWeight(.heavy)
-                        .frame(width: vm.screenWidth * 0.715, alignment: .center)
+                        .frame(width: screenWidth * 0.715, alignment: .center)
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink(destination: {
