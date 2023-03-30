@@ -9,6 +9,9 @@ import SwiftUI
 
 struct ConfigView: View {
     
+    let screenWidth = UIScreen.main.bounds.size.width
+    let screenHeight = UIScreen.main.bounds.size.height
+    
     var body: some View {
         VStack{
             BotaoConfigAprenda(nextView: SobreView(), nomeIcone: "person.circle", textoBotao: "Sobre nós")
@@ -17,8 +20,20 @@ struct ConfigView: View {
             
             BotaoConfigAprenda(nextView: DireitosView(), nomeIcone: "c.circle", textoBotao: "Direitos Autorais")
         }
-        .navigationTitle("Informações")
-        .navigationBarTitleDisplayMode(.automatic)
+        .background {
+            Image("backgroundImage")
+                .resizable()
+                .ignoresSafeArea()
+                .frame(width: screenWidth, height: screenHeight * 1.15, alignment: .center)
+        }
+        .navigationBarTitleDisplayMode(.large)
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                Text("Informações")
+                    .font(.custom("Purple Smile", size: 32))
+                    .foregroundColor(Color("corFundoBotao"))
+            }
+        }
     }
 }
 

@@ -24,25 +24,32 @@ struct CardAnimationView: View {
         
     var body: some View {
         ZStack {
+            RoundedRectangle(cornerRadius: 25)
+                .foregroundColor(Color("corFundoBotao"))
+                .shadow(radius: 4, x: 0, y: 4)
             VStack {
                 HStack {
                     VideoPlayer(player: videoPlayer)
+                        .cornerRadius(25)
                 }
+                .padding(30)
                 .onAppear() {
                     videoPlayer.play()
                 }
                     
                 VStack {
                     Text(textoDescricao)
-                        .frame(width: screenWidth * 0.6, alignment: .center)
-                        .font(.system(size: 26, weight: .semibold))
-                        .padding(.trailing, 20)
-                        .foregroundColor(.black)
+//                        .frame(width: screenWidth * 0.6, alignment: .center)
+                        .font(.system(size: 22, weight: .semibold))
+                        .foregroundColor(Color("corTexto"))
+                        .padding(.top, -30)
+                        .padding(20)
                 }
             }
         }
-        .frame(width: 300, height: 500)
-        .background(Color.gray.opacity(0.5))
-        .cornerRadius(26)
+        .padding(20)
+//        .frame(width: 300, height: 500)
+//        .background(Color.gray.opacity(0.5))
+//        .cornerRadius(26)
     }
 }

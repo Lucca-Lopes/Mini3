@@ -21,25 +21,24 @@ struct BotaoConfigAprenda<TargetView: View>: View {
         }, label: {
             ZStack{
                 RoundedRectangle(cornerRadius: 25)
-                    .frame(height: screenHeight * 0.2, alignment: .center)
-                    .padding(.horizontal)
-                    .foregroundColor(.green)
-                    
+                    .foregroundColor(Color("corFundoBotao"))
+                    .shadow(radius: 4, x: 0, y: 4)
                 HStack {
                     Image(systemName: nomeIcone)
-                        .resizable()
-                        .frame(width: screenWidth * 0.15, height: screenHeight * 0.065)
-                        .padding(.leading, 60)
-                        .foregroundColor(.black)
-                    Spacer()
+                        .font(.system(size: 32, weight: .bold))
+                        .foregroundColor(Color("corTexto"))
                     Text(textoBotao)
-                        .frame(width: screenWidth * 0.6, alignment: .center)
-                        .font(.system(size: 26, weight: .semibold))
-                        .padding(.trailing, 20)
-                        .foregroundColor(.black)
+                        .font(.custom("Purple Smile", size: 32))
+                        .multilineTextAlignment(.leading)
+                        .foregroundColor(Color("corTexto"))
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .font(.system(size: 32, weight: .bold))
+                        .foregroundColor(Color("corTexto"))
                 }
+                .padding()
             }
-            .padding(.vertical, 20)
         })
+        .padding()
     }
 }
