@@ -24,6 +24,7 @@ struct TarefaRowView: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 25)
                     .foregroundColor(Color("corFundoBotao"))
+                    .padding(.vertical, -10)
                 HStack {
                     Text(vm.dias[numeroDia - 1].tarefas[indexTarefa].titulo)
                         .font(.custom("Purple Smile", size: 32))
@@ -35,13 +36,26 @@ struct TarefaRowView: View {
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
                             .frame(width: screenWidth * 0.2, height: screenHeight * 0.1)
-                            .shadow(radius: 4, x: 0, y: 4)
                             .foregroundColor(vm.dias[numeroDia - 1].tarefas[indexTarefa].concluida ? Color("corTexto") : Color("corFundoTriste"))
+                            .shadow(radius: 4, x: 0, y: 4)
+//                            .overlay(
+//                                RoundedRectangle(cornerRadius: 10)
+//                                    .stroke(Color("corFundoTriste"),
+//                                            lineWidth: 1)
+//                                    .shadow(radius: 4, x: 0, y: 4)
+//                                    .clipShape(
+//                                        RoundedRectangle(cornerRadius: 10)
+//                                    )
+//                                    .shadow(color: Color.white, radius: 4, x: 0, y: -4)
+//                                    .clipShape(
+//                                        RoundedRectangle(cornerRadius: 10)
+//                                    )
+//                            )
                         Image(systemName: vm.definirIconeTarefa(numeroDia: numeroDia, indexTarefa: indexTarefa))
                             .font(.system(size: 36))
                             .foregroundColor(Color("corFundoBotao"))
                     }
-                    .padding(20)
+                    .padding(.horizontal, 20)
                 }
             }
             

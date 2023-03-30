@@ -31,11 +31,11 @@ struct GridCellPlantaView: View {
                         .frame(width: vm.screenWidth * 0.44, height: vm.screenHeight * 0.0025)
                         .foregroundColor(.black)
                     Text("Dia \(vm.dias[numeroDia - 1].numero)")
-                        .font(.custom("Purple Smile", size: 28))
+                        .font(.system(size: 28, design: .rounded))
                         .fontWeight(.bold)
                         .foregroundColor(.black)
                         .padding(.top, -10)
-                    .padding(7.5)
+                        .padding(7.5)
                 }
             }
         }

@@ -14,11 +14,11 @@ struct ConfigView: View {
     
     var body: some View {
         VStack{
-            BotaoConfigAprenda(nextView: SobreView(), nomeIcone: "person.circle", textoBotao: "Sobre nós")
+            BotaoConfigAprenda(nextView: DetalheConfigView(nomeView: "Sobre nós", textoDescricao: "Gira é um app..."), nomeIcone: "person.circle", textoBotao: "Sobre nós")
             
-            BotaoConfigAprenda(nextView: PrivacidadeView(), nomeIcone: "lock.circle", textoBotao: "Política de Privacidade")
+            BotaoConfigAprenda(nextView: DetalheConfigView(nomeView: "Política de Privacidade", textoDescricao: "Não serão coletados dados sensíveis de nossos usuários. Não compartilhamos dados pessoais com terceiros. Apesar disso, é possível que o façamos para cumprir alguma determinação legal ou regulatória, ou ainda, para cumprir alguma ordem expedida por autoridade pública. Quaisquer tipos de dados que por ventura precisem ser coletados só serão coletados desde que sejam fornecidos com o consentimento do usuário. Conforme Lei de Proteção de Dados Pessoais, a coleta de dados e as atividades de tratamento delas decorrentes serão informadas aos usuários do aplicativo."), nomeIcone: "lock.circle", textoBotao: "Política de Privacidade")
             
-            BotaoConfigAprenda(nextView: DireitosView(), nomeIcone: "c.circle", textoBotao: "Direitos Autorais")
+            BotaoConfigAprenda(nextView: DetalheConfigView(nomeView: "Direitos Autorais", textoDescricao: "©2023Gira. Todos os direitos reservados a seus criadores: Mari Higashi, Caroline Stelitano, Lucca Lopes e Higor Lo Castro."), nomeIcone: "c.circle", textoBotao: "Direitos Autorais")
         }
         .background {
             Image("backgroundImage")
@@ -30,7 +30,7 @@ struct ConfigView: View {
         .toolbar {
             ToolbarItem(placement: .principal) {
                 Text("Informações")
-                    .font(.custom("Purple Smile", size: 32))
+                    .font(.custom("Purple Smile", size: 24))
                     .foregroundColor(Color("corFundoBotao"))
             }
         }

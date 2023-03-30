@@ -31,7 +31,7 @@ struct DetalheDiaView: View {
         .toolbar {
             ToolbarItem(placement: .principal) {
                 Text("Tarefas do dia")
-                    .font(.custom("Purple Smile", size: 32))
+                    .font(.custom("Purple Smile", size: 24))
                     .foregroundColor(Color("corFundoBotao"))
             }
         }

@@ -18,7 +18,9 @@ struct HomeView: View {
                 BotaoHome(screenHeight: screenHeight, screenWidth: screenWidth, nextView: DiarioView(), nomeIcone: "girassolOculos", textoBotao: "Diário", imagemWidth: screenWidth * 0.4, imagemHeight: screenHeight * 0.25, tamanhoFonte: 36)
                 .padding(.vertical, 50)
                 BotaoHome(screenHeight: screenHeight, screenWidth: screenWidth, nextView: AprendaCuidarView(), nomeIcone: "girassolAgua", textoBotao: "Aprenda a cuidar", imagemWidth: screenWidth * 0.4, imagemHeight: screenHeight * 0.25, tamanhoFonte: 30)
+                Spacer()
             }
+            .navigationBarTitleDisplayMode(.large)
             .toolbar{
                 ToolbarItem(placement: .navigationBarLeading) {
                     Text("Gira")
@@ -26,6 +28,7 @@ struct HomeView: View {
                         .fontWeight(.regular)
                         .foregroundColor(Color("corFundoBotao"))
                         .padding(.leading, 20)
+//                        .padding(.top, 30)
 //                        .frame(width: screenWidth * 0.64, alignment: .center)
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -35,6 +38,7 @@ struct HomeView: View {
                         Image("botaoInfo")
                             .resizable()
                             .frame(width: screenWidth * 0.1, height: screenWidth * 0.1)
+//                            .padding(.top, 30)
                     })
                 }
             }
@@ -44,8 +48,6 @@ struct HomeView: View {
                     .ignoresSafeArea()
                     .frame(width: screenWidth, height: screenHeight * 1.15, alignment: .center)
             }
-            .navigationBarTitleDisplayMode(.large)
         }
-        
     }
 }

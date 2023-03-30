@@ -30,7 +30,7 @@ struct DetalheAprendaCuidarView: View {
         .toolbar {
             ToolbarItem(placement: .principal) {
                 Text(nomeView)
-                    .font(.custom("Purple Smile", size: 32))
+                    .font(.custom("Purple Smile", size: 24))
                     .foregroundColor(Color("corFundoBotao"))
             }
         }

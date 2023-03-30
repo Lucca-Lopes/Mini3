@@ -14,12 +14,12 @@ struct DiarioView: View {
     var body: some View {
         if vm.cultivoIniciado {
             ScrollView {
-                LazyVGrid(columns: [GridItem(.flexible(), spacing: 20), GridItem(.flexible(), spacing: 20)], alignment: .center, spacing: 20) {
+                LazyVGrid(columns: [GridItem(.flexible(), spacing: 50), GridItem(.flexible(), spacing: 50)], alignment: .center, spacing: 30) {
                     ForEach(vm.dias, id: \.numero) { dia in
                         GridCellPlantaView(vm: vm, numeroDia: dia.numero)
                     }
                 }
-                .padding()
+                .padding(20)
             }
             .background {
                 Image("backgroundImage")
@@ -31,7 +31,7 @@ struct DiarioView: View {
             .toolbar {
                 ToolbarItem(placement: .principal) {
                     Text("Diário")
-                        .font(.custom("Purple Smile", size: 32))
+                        .font(.custom("Purple Smile", size: 24))
                         .foregroundColor(Color("corFundoBotao"))
                 }
             }

@@ -54,6 +54,7 @@ class ViewModel: ObservableObject {
             print("Dias: \(dias)")
         }
     }
+    
     private func designarTarefas(dia: Int) -> [Bool] {
         switch dia % 7 {
         case 1:

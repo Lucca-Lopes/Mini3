@@ -27,10 +27,12 @@ struct BotaoConfigAprenda<TargetView: View>: View {
                     Image(systemName: nomeIcone)
                         .font(.system(size: 32, weight: .bold))
                         .foregroundColor(Color("corTexto"))
+                        .padding(.horizontal)
                     Text(textoBotao)
                         .font(.custom("Purple Smile", size: 32))
                         .multilineTextAlignment(.leading)
                         .foregroundColor(Color("corTexto"))
+//                        .padding(.horizontal)
                     Spacer()
                     Image(systemName: "chevron.right")
                         .font(.system(size: 32, weight: .bold))
@@ -39,6 +41,6 @@ struct BotaoConfigAprenda<TargetView: View>: View {
                 .padding()
             }
         })
-        .padding()
+        .padding(30)
     }
 }

@@ -14,11 +14,11 @@ struct AprendaCuidarView: View {
     
     var body: some View {
         VStack{
-            BotaoConfigAprenda(nextView: DetalheAprendaCuidarView(nomeView: "Rega", textoDescricao: "Seu girassol precisa de água", nomeVideo: "videoSol"), nomeIcone: "drop", textoBotao: "Umidade da terra")
+            BotaoConfigAprenda(nextView: DetalheAprendaCuidarView(nomeView: "Rega", textoDescricao: "O Gira gosta de água mas não muito, regue se a terra estiver muito seca.", nomeVideo: "VideoRega"), nomeIcone: "drop", textoBotao: "Umidade da terra")
             
-            BotaoConfigAprenda(nextView: DetalheAprendaCuidarView(nomeView: "Sol", textoDescricao: "Seu girassol adora sol!", nomeVideo: "videoSol"), nomeIcone: "sun.max", textoBotao: "Sol")
+            BotaoConfigAprenda(nextView: DetalheAprendaCuidarView(nomeView: "Sol", textoDescricao: "O Gira gosta muito de sol, deixe ele em um lugar iluminado.", nomeVideo: "VideoSol"), nomeIcone: "sun.max", textoBotao: "Sol")
             
-            BotaoConfigAprenda(nextView: DetalheAprendaCuidarView(nomeView: "Pragas", textoDescricao: "Tire as pragas do seu girassol", nomeVideo: "videoSol"), nomeIcone: "ant", textoBotao: "Procure pragas") 
+            BotaoConfigAprenda(nextView: DetalheAprendaCuidarView(nomeView: "Pragas", textoDescricao: "Procure matinhos na terra do Gira. \n\nSe tiver algum, retire para o Gira crescer forte.", nomeVideo: "VideoPragas"), nomeIcone: "ant", textoBotao: "Procure pragas")
         }
         .background {
             Image("backgroundImage")
@@ -30,7 +30,7 @@ struct AprendaCuidarView: View {
         .toolbar {
             ToolbarItem(placement: .principal) {
                 Text("Aprenda a cuidar")
-                    .font(.custom("Purple Smile", size: 32))
+                    .font(.custom("Purple Smile", size: 24))
                     .foregroundColor(Color("corFundoBotao"))
             }
         }
