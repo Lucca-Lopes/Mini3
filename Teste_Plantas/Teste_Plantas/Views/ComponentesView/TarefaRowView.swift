@@ -22,29 +22,31 @@ struct TarefaRowView: View {
             vm.atualizarTarefa(numeroDia: numeroDia, indexTarefa: indexTarefa)
         } label: {
             ZStack {
-                RoundedRectangle(cornerRadius: 20)
-                    .frame(width: screenWidth * 0.8, height: screenHeight * 0.15, alignment: .center)
-                    .foregroundColor(Color(.lightGray))
+                RoundedRectangle(cornerRadius: 25)
+                    .foregroundColor(Color("corFundoBotao"))
                 HStack {
                     Text(vm.dias[numeroDia - 1].tarefas[indexTarefa].titulo)
-                        .font(.title)
-                        .fontWeight(.heavy)
-                        .padding()
+                        .font(.custom("Purple Smile", size: 32))
+                        .fontWeight(.regular)
+                        .foregroundColor(Color("corTexto"))
+                        .multilineTextAlignment(.leading)
+                        .padding(20)
                     Spacer()
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
                             .frame(width: screenWidth * 0.2, height: screenHeight * 0.1)
-                            .foregroundColor(vm.dias[numeroDia - 1].tarefas[indexTarefa].concluida ? .green : .red)
-                        Image(systemName: "sun.max")
-                            .resizable()
-                            .frame(width: screenWidth * 0.155, height: screenHeight * 0.08)
-                        
+                            .shadow(radius: 4, x: 0, y: 4)
+                            .foregroundColor(vm.dias[numeroDia - 1].tarefas[indexTarefa].concluida ? Color("corTexto") : Color("corFundoTriste"))
+                        Image(systemName: vm.definirIconeTarefa(numeroDia: numeroDia, indexTarefa: indexTarefa))
+                            .font(.system(size: 36))
+                            .foregroundColor(Color("corFundoBotao"))
                     }
-                    .padding()
+                    .padding(20)
                 }
             }
             
         }
+        .padding(30)
     }
 }
 

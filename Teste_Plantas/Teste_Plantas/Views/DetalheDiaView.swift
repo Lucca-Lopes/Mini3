@@ -14,9 +14,25 @@ struct DetalheDiaView: View {
     let numeroDia: Int
     
     var body: some View {
-        List {
-            ForEach(vm.dias[numeroDia - 1].tarefas, id: \.hashValue){ tarefa in
-                TarefaRowView(vm: vm, numeroDia: numeroDia, indexTarefa: vm.dias[numeroDia - 1].tarefas.firstIndex(of: tarefa) ?? 0)
+        ScrollView {
+            LazyVStack {
+                ForEach(vm.dias[numeroDia - 1].tarefas, id: \.hashValue){ tarefa in
+                    TarefaRowView(vm: vm, numeroDia: numeroDia, indexTarefa: vm.dias[numeroDia - 1].tarefas.firstIndex(of: tarefa) ?? 0)
+                }
+            }
+        }
+        .background {
+            Image("backgroundImage")
+                .resizable()
+                .ignoresSafeArea()
+                .frame(width: vm.screenWidth, height: vm.screenHeight * 1.15, alignment: .center)
+        }
+        .navigationBarTitleDisplayMode(.large)
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                Text("Tarefas do dia")
+                    .font(.custom("Purple Smile", size: 32))
+                    .foregroundColor(Color("corFundoBotao"))
             }
         }
     }

@@ -18,44 +18,25 @@ struct GridCellPlantaView: View {
     var body: some View {
         NavigationLink(destination: DetalheDiaView(vm: vm, numeroDia: numeroDia)) {
             ZStack {
-                RoundedRectangle(cornerRadius: 5)
-                    .foregroundColor(.white)
-                    .shadow(radius: 5)
-                    .padding(.horizontal, 10)
-                    .padding(.vertical, 10)
+                RoundedRectangle(cornerRadius: 25)
+                    .foregroundColor(Color(vm.definirCorBotao(numeroDia: numeroDia)))
+                    .shadow(radius: 4, x: 0, y: 4)
                 VStack {
+                    Spacer()
                     Image(vm.dias[numeroDia - 1].imagem)
                         .resizable()
-                        .frame(width: vm.screenWidth * 0.25, height: vm.screenHeight * 0.25)
-                        
-//                        .padding()
+                        .frame(width: vm.screenWidth * 0.4, height: vm.screenHeight * 0.25)
+                        .padding(.bottom, -10)
                     Rectangle()
-                        .frame(width: vm.screenWidth * 0.44, height: vm.screenHeight * 0.001)
+                        .frame(width: vm.screenWidth * 0.44, height: vm.screenHeight * 0.0025)
                         .foregroundColor(.black)
-//                        .padding(.top)
                     Text("Dia \(vm.dias[numeroDia - 1].numero)")
-                        .font(.title)
+                        .font(.custom("Purple Smile", size: 28))
                         .fontWeight(.bold)
-                        .padding(2.5)
-                    //            cardPlantaModel.imagem
-                    //                .resizable()
-                    //                .aspectRatio(contentMode: .fill)
-                    //                .frame(width: cardWidth, height: cardHeight)
-                    //                .clipShape(Circle())
-                    //                .overlay(Circle().stroke(Color.white, lineWidth: 4))
-                    //                .shadow(radius: 7)
-                    //            Text(cardPlantaModel.nome)
-                    //                .font(.title)
-                    //                .fontWeight(.bold)
-                    //            Text("Dia - \(cardPlantaModel.dia)")
-                    //                .font(.subheadline)
-                    //                .foregroundColor(.gray)
+                        .foregroundColor(.black)
+                        .padding(.top, -10)
+                    .padding(7.5)
                 }
-                .padding(.vertical, 10)  //Espaço em relação a borda
-                
-        //        .background(Color.white)
-    //            .cornerRadius(10)
-            
             }
         }
     }

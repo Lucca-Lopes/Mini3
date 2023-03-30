@@ -64,6 +64,29 @@ class ViewModel: ObservableObject {
             return [false]
         }
     }
+    
+    public func definirCorBotao(numeroDia: Int) -> String{
+        switch self.dias[numeroDia - 1].imagem {
+        case "girassolTriste":
+            return "corFundoTriste"
+        case "girassolNeutro":
+            return "corFundoNeutro"
+        default:
+            return "corFundoBotao"
+        }
+    }
+    
+    public func definirIconeTarefa(numeroDia: Int, indexTarefa: Int) -> String{
+        switch self.dias[numeroDia - 1].tarefas[indexTarefa].titulo {
+        case "Coloque no Sol":
+            return "sun.max"
+        case "Procure Pragas":
+            return "ant"
+        default:
+            return "drop"
+        }
+    }
+    
 }
 
 extension Calendar {

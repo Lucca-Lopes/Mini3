@@ -44,8 +44,7 @@ struct HomeView: View {
                     .ignoresSafeArea()
                     .frame(width: screenWidth, height: screenHeight * 1.15, alignment: .center)
             }
-//            .navigationTitle("Naturee")
-//            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitleDisplayMode(.large)
         }
         
     }
