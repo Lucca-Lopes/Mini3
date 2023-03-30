@@ -11,51 +11,51 @@ struct CardPlantaInicioView: View {
     @ObservedObject var vm: ViewModel
     
     let title: String
-    let subtitle: String
-    let imageIcone: String
+//    let subtitle: String
+//    let imageIcone: String
     
     let screenWidth = UIScreen.main.bounds.width
     let screenHeight = UIScreen.main.bounds.height
     
     var body: some View {
-        ZStack {
-            VStack {
+        VStack {
+//            VStack {
                 Text(title)
                     .font(.system(size: 32, weight: .semibold))
-                    .padding(.top, -210)
+//                    .padding(.top, -210)
                 
-                Text(subtitle)
-                    .font(.system(size: 32, weight: .semibold))
-                    .multilineTextAlignment(.center)
-                    .padding(.top, -190)
-            }
+//                Text(subtitle)
+//                    .font(.system(size: 32, weight: .semibold))
+//                    .multilineTextAlignment(.center)
+//                    .padding(.top, -190)
+//            }
             
             VStack {
-                Image(systemName: imageIcone)
+                Image("girassolFeliz")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .padding(screenWidth * 0.25)
                     .foregroundColor(Color.gray)
             }
             
-            Spacer ()
+//            Spacer ()
             
-            VStack {
+//            VStack {
                 Spacer()
-                NavigationLink(destination: PlantaView()) {
+            Button(action: {
+                vm.iniciarCultivo(cultivoIniciado: true)
+                
+            }, label: {
                     Text("Plantar")
-                        .foregroundColor(.black)
-                        .font(.title)
+                        .font(.custom("Purple Smile", size: 32))
+                        .foregroundColor(Color("corFundoBotao"))
                         .padding(40)
                         .frame(width: 200, height: 60)
                         .background(.gray)
                         .cornerRadius(15)
-                }.simultaneousGesture(TapGesture().onEnded{
-                    vm.iniciarCultivo(cultivoIniciado: true)
                 })
-                
-            }
-            .frame(height: 450)
+//            }
+//            .frame(height: 450)
             
         }
         .frame(width: 300, height: 500)

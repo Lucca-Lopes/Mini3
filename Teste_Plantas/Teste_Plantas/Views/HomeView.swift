@@ -38,6 +38,7 @@ struct HomeView: View {
                         Image("botaoInfo")
                             .resizable()
                             .frame(width: screenWidth * 0.1, height: screenWidth * 0.1)
+                            .padding(.trailing, 20)
 //                            .padding(.top, 30)
                     })
                 }

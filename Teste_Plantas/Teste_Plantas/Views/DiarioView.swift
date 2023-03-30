@@ -11,6 +11,8 @@ struct DiarioView: View {
     
     @ObservedObject var vm = ViewModel()
     
+    @Environment(\.dismiss) private var dismiss
+    
     var body: some View {
         if vm.cultivoIniciado {
             ScrollView {
@@ -21,6 +23,7 @@ struct DiarioView: View {
                 }
                 .padding(20)
             }
+            .navigationBarBackButtonHidden(true)
             .background {
                 Image("backgroundImage")
                     .resizable()
@@ -34,10 +37,43 @@ struct DiarioView: View {
                         .font(.custom("Purple Smile", size: 24))
                         .foregroundColor(Color("corFundoBotao"))
                 }
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+                        dismiss.callAsFunction()
+                    }, label: {
+                        Image(systemName: "chevron.left")
+                            .font(.system(size: 23, weight: .heavy))
+                            .foregroundColor(Color("corFundoBotao"))
+                    })
+                }
             }
         }
         else {
-            CardPlantaInicioView(vm: vm, title: "Começar a cuidar", subtitle: "do girassol", imageIcone: "camera.macro")
+            CardPlantaInicioView(vm: vm, title: "Começar a cuidar do girassol")
+                .navigationBarBackButtonHidden(true)
+                .background {
+                    Image("backgroundImage")
+                        .resizable()
+                        .ignoresSafeArea()
+                        .frame(width: vm.screenWidth, height: vm.screenHeight * 1.15, alignment: .center)
+                }
+                .navigationBarTitleDisplayMode(.large)
+                .toolbar {
+                    ToolbarItem(placement: .principal) {
+                        Text("Diário")
+                            .font(.custom("Purple Smile", size: 24))
+                            .foregroundColor(Color("corFundoBotao"))
+                    }
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button(action: {
+                            dismiss.callAsFunction()
+                        }, label: {
+                            Image(systemName: "chevron.left")
+                                .font(.system(size: 23, weight: .heavy))
+                                .foregroundColor(Color("corFundoBotao"))
+                        })
+                    }
+                }
         }
         
     }
