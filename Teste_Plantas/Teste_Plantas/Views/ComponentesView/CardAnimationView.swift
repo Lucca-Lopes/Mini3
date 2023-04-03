@@ -20,6 +20,7 @@ struct CardAnimationView: View {
         self.textoDescricao = textoDescricao
         self.nomeVideo = nomeVideo
         self.videoPlayer = AVPlayer(url: Bundle.main.url(forResource: nomeVideo, withExtension: "mov")!)
+        self.videoPlayer.play()
     }
         
     var body: some View {
@@ -32,9 +33,6 @@ struct CardAnimationView: View {
                         .frame(height: screenHeight * 0.419)
                         .cornerRadius(25)
                         .padding(20)
-                        .onAppear() {
-                            videoPlayer.play()
-                        }
                     Spacer()
                     Text(textoDescricao)
                         .font(.system(size: 22, weight: .semibold, design: .rounded))
