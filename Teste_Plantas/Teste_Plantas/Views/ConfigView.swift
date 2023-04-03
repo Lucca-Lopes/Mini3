@@ -16,7 +16,7 @@ struct ConfigView: View {
     
     var body: some View {
         VStack{
-            BotaoConfigAprenda(nextView: DetalheConfigView(nomeView: "Sobre nós", textoDescricao: "Gira é um app..."), nomeIcone: "person.circle", textoBotao: "Sobre nós")
+            BotaoConfigAprenda(nextView: DetalheConfigView(nomeView: "Sobre", textoDescricao: "O Gira é um aplicativo desenvolvido pensando em crianças que estão plantando um girassol, tanto no ambiente pedagógico quanto no familiar."), nomeIcone: "person.circle", textoBotao: "Sobre")
             
             BotaoConfigAprenda(nextView: DetalheConfigView(nomeView: "Política de Privacidade", textoDescricao: "Não serão coletados dados sensíveis de nossos usuários. Não compartilhamos dados pessoais com terceiros. Apesar disso, é possível que o façamos para cumprir alguma determinação legal ou regulatória, ou ainda, para cumprir alguma ordem expedida por autoridade pública. Quaisquer tipos de dados que por ventura precisem ser coletados só serão coletados desde que sejam fornecidos com o consentimento do usuário. Conforme Lei de Proteção de Dados Pessoais, a coleta de dados e as atividades de tratamento delas decorrentes serão informadas aos usuários do aplicativo."), nomeIcone: "lock.circle", textoBotao: "Política de Privacidade")
             
