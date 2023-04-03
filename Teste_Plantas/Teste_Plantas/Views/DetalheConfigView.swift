@@ -15,11 +15,10 @@ struct DetalheConfigView: View {
     let nomeView: String
     let textoDescricao: String
     
+    @Environment(\.dismiss) private var dismiss
+    
     var body: some View {
         VStack {
-//            RoundedRectangle(cornerRadius: 25)
-//                .foregroundColor(Color("corFundoBotao"))
-//                .padding()
             Text(textoDescricao)
                 .font(.system(size: 16, weight: .semibold, design: .rounded))
                 .foregroundColor(Color("corTexto"))
@@ -33,6 +32,7 @@ struct DetalheConfigView: View {
                 .padding(.top, 80)
             Spacer()
         }
+        .navigationBarBackButtonHidden(true)
         .background {
             Image("backgroundImage")
                 .resizable()
@@ -45,6 +45,15 @@ struct DetalheConfigView: View {
                 Text(nomeView)
                     .font(.custom("Purple Smile", size: 24))
                     .foregroundColor(Color("corFundoBotao"))
+            }
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button(action: {
+                    dismiss.callAsFunction()
+                }, label: {
+                    Image(systemName: "chevron.left")
+                        .font(.system(size: 23, weight: .heavy))
+                        .foregroundColor(Color("corFundoBotao"))
+                })
             }
         }
     }

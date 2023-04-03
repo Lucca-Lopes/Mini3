@@ -49,32 +49,30 @@ struct DiarioView: View {
             }
         }
         else {
-            CardPlantaInicioView(vm: vm, title: "Começar a cuidar do girassol")
-                .navigationBarBackButtonHidden(true)
-                .background {
-                    Image("backgroundImage")
-                        .resizable()
-                        .ignoresSafeArea()
-                        .frame(width: vm.screenWidth, height: vm.screenHeight * 1.15, alignment: .center)
-                }
-                .navigationBarTitleDisplayMode(.large)
-                .toolbar {
-                    ToolbarItem(placement: .principal) {
-                        Text("Diário")
-                            .font(.custom("Purple Smile", size: 24))
+            VStack {
+                CardPlantaInicioView(vm: vm, title: "Comece a cuidar do Gira!")
+                    .padding(.top)
+                Spacer()
+            }
+            .navigationBarBackButtonHidden(true)
+            .background {
+                Image("backgroundImage")
+                    .resizable()
+                    .ignoresSafeArea()
+                    .frame(width: vm.screenWidth, height: vm.screenHeight * 1.15, alignment: .center)
+            }
+            .navigationBarTitleDisplayMode(.large)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+                        dismiss.callAsFunction()
+                    }, label: {
+                        Image(systemName: "chevron.left")
+                            .font(.system(size: 23, weight: .heavy))
                             .foregroundColor(Color("corFundoBotao"))
-                    }
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        Button(action: {
-                            dismiss.callAsFunction()
-                        }, label: {
-                            Image(systemName: "chevron.left")
-                                .font(.system(size: 23, weight: .heavy))
-                                .foregroundColor(Color("corFundoBotao"))
-                        })
-                    }
+                    })
                 }
+            }
         }
-        
     }
 }

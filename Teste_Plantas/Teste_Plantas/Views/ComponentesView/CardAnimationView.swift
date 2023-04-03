@@ -30,7 +30,6 @@ struct CardAnimationView: View {
             VStack {
                     VideoPlayer(player: videoPlayer)
                         .frame(height: screenHeight * 0.419)
-                    //width: screenWidth * 0.799,
                         .cornerRadius(25)
                         .padding(20)
                         .onAppear() {
@@ -38,7 +37,6 @@ struct CardAnimationView: View {
                         }
                     Spacer()
                     Text(textoDescricao)
-//                        .frame(width: screenWidth * 0.6, alignment: .center)
                         .font(.system(size: 22, weight: .semibold, design: .rounded))
                         .multilineTextAlignment(.center)
                         .foregroundColor(Color("corTexto"))
@@ -48,8 +46,5 @@ struct CardAnimationView: View {
             }
         }
         .padding(30)
-//        .frame(width: 300, height: 500)
-//        .background(Color.gray.opacity(0.5))
-//        .cornerRadius(26)
     }
 }

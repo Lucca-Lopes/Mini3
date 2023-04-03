@@ -36,7 +36,6 @@ struct BotaoHome<TargetView: View>: View {
                         .foregroundColor(.black)
                     Spacer()
                     Text(textoBotao)
-//                        .frame(width: screenWidth * 0.5, alignment: .center)
                         .font(.custom("Purple Smile", size: tamanhoFonte))
                         .kerning(0.5)
                         .padding(.trailing, 35)

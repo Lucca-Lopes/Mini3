@@ -16,10 +16,13 @@ struct DetalheAprendaCuidarView: View {
     let textoDescricao: String
     let nomeVideo: String
     
+    @Environment(\.dismiss) private var dismiss
+    
     var body: some View {
         VStack(alignment: .center) {
             CardAnimationView(textoDescricao: textoDescricao, nomeVideo: nomeVideo)
         }
+        .navigationBarBackButtonHidden(true)
         .background {
             Image("backgroundImage")
                 .resizable()
@@ -33,16 +36,17 @@ struct DetalheAprendaCuidarView: View {
                     .font(.custom("Purple Smile", size: 24))
                     .foregroundColor(Color("corFundoBotao"))
             }
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button(action: {
+                    dismiss.callAsFunction()
+                }, label: {
+                    Image(systemName: "chevron.left")
+                        .font(.system(size: 23, weight: .heavy))
+                        .foregroundColor(Color("corFundoBotao"))
+                })
+            }
         }
 
     }
     
 }
-
-
-
-//struct SolView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SolView()
-//    }
-//}

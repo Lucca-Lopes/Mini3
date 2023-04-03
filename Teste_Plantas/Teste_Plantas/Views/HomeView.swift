@@ -28,8 +28,6 @@ struct HomeView: View {
                         .fontWeight(.regular)
                         .foregroundColor(Color("corFundoBotao"))
                         .padding(.leading, 20)
-//                        .padding(.top, 30)
-//                        .frame(width: screenWidth * 0.64, alignment: .center)
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink(destination: {
@@ -39,7 +37,6 @@ struct HomeView: View {
                             .resizable()
                             .frame(width: screenWidth * 0.1, height: screenWidth * 0.1)
                             .padding(.trailing, 20)
-//                            .padding(.top, 30)
                     })
                 }
             }

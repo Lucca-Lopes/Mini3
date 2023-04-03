@@ -10,6 +10,7 @@ import SwiftUI
 struct DetalheDiaView: View {
     
     @ObservedObject var vm: ViewModel
+    @Environment(\.dismiss) private var dismiss
     
     let numeroDia: Int
     
@@ -21,6 +22,7 @@ struct DetalheDiaView: View {
                 }
             }
         }
+        .navigationBarBackButtonHidden(true)
         .background {
             Image("backgroundImage")
                 .resizable()
@@ -34,6 +36,16 @@ struct DetalheDiaView: View {
                     .font(.custom("Purple Smile", size: 24))
                     .foregroundColor(Color("corFundoBotao"))
             }
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button(action: {
+                    dismiss.callAsFunction()
+                }, label: {
+                    Image(systemName: "chevron.left")
+                        .font(.system(size: 23, weight: .heavy))
+                        .foregroundColor(Color("corFundoBotao"))
+                })
+            }
+
         }
     }
 }

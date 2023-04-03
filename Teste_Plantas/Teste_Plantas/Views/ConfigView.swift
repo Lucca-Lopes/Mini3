@@ -12,6 +12,8 @@ struct ConfigView: View {
     let screenWidth = UIScreen.main.bounds.size.width
     let screenHeight = UIScreen.main.bounds.size.height
     
+    @Environment(\.dismiss) private var dismiss
+    
     var body: some View {
         VStack{
             BotaoConfigAprenda(nextView: DetalheConfigView(nomeView: "Sobre nós", textoDescricao: "Gira é um app..."), nomeIcone: "person.circle", textoBotao: "Sobre nós")
@@ -20,6 +22,7 @@ struct ConfigView: View {
             
             BotaoConfigAprenda(nextView: DetalheConfigView(nomeView: "Direitos Autorais", textoDescricao: "©2023Gira. Todos os direitos reservados a seus criadores: Mari Higashi, Caroline Stelitano, Lucca Lopes e Higor Lo Castro."), nomeIcone: "c.circle", textoBotao: "Direitos Autorais")
         }
+        .navigationBarBackButtonHidden(true)
         .background {
             Image("backgroundImage")
                 .resizable()
@@ -33,13 +36,15 @@ struct ConfigView: View {
                     .font(.custom("Purple Smile", size: 24))
                     .foregroundColor(Color("corFundoBotao"))
             }
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button(action: {
+                    dismiss.callAsFunction()
+                }, label: {
+                    Image(systemName: "chevron.left")
+                        .font(.system(size: 23, weight: .heavy))
+                        .foregroundColor(Color("corFundoBotao"))
+                })
+            }
         }
     }
 }
-
-
-//struct ConfigView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ConfigView()
-//    }
-//}

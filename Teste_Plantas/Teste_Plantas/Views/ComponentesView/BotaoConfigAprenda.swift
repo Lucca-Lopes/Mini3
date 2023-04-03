@@ -32,7 +32,6 @@ struct BotaoConfigAprenda<TargetView: View>: View {
                         .font(.custom("Purple Smile", size: 32))
                         .multilineTextAlignment(.leading)
                         .foregroundColor(Color("corTexto"))
-//                        .padding(.horizontal)
                     Spacer()
                     Image(systemName: "chevron.right")
                         .font(.system(size: 32, weight: .bold))

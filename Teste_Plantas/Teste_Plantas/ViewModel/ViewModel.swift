@@ -21,7 +21,7 @@ class ViewModel: ObservableObject {
     
     public init() {
         self.dataInicial = dados.dataInicial
-//        self.cultivoIniciado = dados.cultivoIniciado
+        self.cultivoIniciado = dados.cultivoIniciado
         self.dias = dados.dias
         self.dateComponents.timeZone = TimeZone.current
         self.dateComponents.calendar = Calendar.current
@@ -29,8 +29,8 @@ class ViewModel: ObservableObject {
     }
     
     public func iniciarCultivo(cultivoIniciado: Bool){
-//        self.cultivoIniciado = cultivoIniciado
-//        self.dados.definirCultivoIniciado(cultivoIniciado: cultivoIniciado)
+        self.cultivoIniciado = cultivoIniciado
+        self.dados.definirCultivoIniciado(cultivoIniciado: cultivoIniciado)
     }
     
     public func atualizarTarefa(numeroDia: Int, indexTarefa: Int){
