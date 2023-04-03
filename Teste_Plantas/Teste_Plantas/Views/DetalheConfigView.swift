@@ -20,7 +20,7 @@ struct DetalheConfigView: View {
     var body: some View {
         VStack {
             Text(textoDescricao)
-                .font(.system(size: 16, weight: .semibold, design: .rounded))
+                .font(.system(size: 20, weight: .semibold, design: .rounded))
                 .foregroundColor(Color("corTexto"))
                 .frame(width: screenWidth * 0.7)
                 .background{
