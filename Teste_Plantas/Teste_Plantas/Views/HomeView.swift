@@ -47,5 +47,6 @@ struct HomeView: View {
                     .frame(width: screenWidth, height: screenHeight * 1.15, alignment: .center)
             }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }

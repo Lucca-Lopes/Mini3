@@ -18,19 +18,21 @@ struct DetalheConfigView: View {
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
-        VStack {
-            Text(textoDescricao)
-                .font(.system(size: 20, weight: .semibold, design: .rounded))
-                .foregroundColor(Color("corTexto"))
-                .frame(width: screenWidth * 0.7)
-                .background{
-                    RoundedRectangle(cornerRadius: 25)
-                        .foregroundColor(Color("corFundoBotao"))
-                        .frame(width: screenWidth * 0.8)
-                        .padding(.vertical, -30)
-                }
-                .padding(.top, 80)
-            Spacer()
+        ScrollView(){
+            LazyVStack {
+                Text(textoDescricao)
+                    .font(.system(size: 20, weight: .semibold, design: .rounded))
+                    .foregroundColor(Color("corTexto"))
+                    .frame(width: screenWidth * 0.7)
+                    .background{
+                        RoundedRectangle(cornerRadius: 25)
+                            .foregroundColor(Color("corFundoBotao"))
+                            .frame(width: screenWidth * 0.8)
+                            .padding(.vertical, -30)
+                    }
+                    .padding(.top, 80)
+                Spacer()
+            }
         }
         .navigationBarBackButtonHidden(true)
         .background {

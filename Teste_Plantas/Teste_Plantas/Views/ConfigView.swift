@@ -29,6 +29,7 @@ struct ConfigView: View {
                 .ignoresSafeArea()
                 .frame(width: screenWidth, height: screenHeight * 1.15, alignment: .center)
         }
+        .minimumScaleFactor(0.5)
         .navigationBarTitleDisplayMode(.large)
         .toolbar {
             ToolbarItem(placement: .principal) {

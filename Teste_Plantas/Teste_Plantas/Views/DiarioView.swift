@@ -30,6 +30,7 @@ struct DiarioView: View {
                     .ignoresSafeArea()
                     .frame(width: vm.screenWidth, height: vm.screenHeight * 1.15, alignment: .center)
             }
+            .minimumScaleFactor(0.5)
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
                 ToolbarItem(placement: .principal) {
