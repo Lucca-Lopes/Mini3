@@ -9,55 +9,27 @@ import Foundation
 
 class UserDefaultsModel {
     var userDefaults = UserDefaults.standard
-    var dataInicial: Date = Date()
-    var dias: [DiaModel] = []
-    var cultivoIniciado: Bool = false
+    var girassois: [GirassolModel] = []
     
     init(){
-//        clearDataBase()
-        receberCultivoIniciado()
-        receberDias()
-        
-        if !receberData() && cultivoIniciado {
-            let data: Date = Date()
-            definirData(data: data)
-        }
+        receberGirassois()
     }
     
-    public func definirCultivoIniciado(cultivoIniciado: Bool){
-        userDefaults.set(cultivoIniciado, forKey: "CultivoIniciado")
-    }
-    
-    public func definirData(data: Date){
-        userDefaults.set(data, forKey: "DataInicial")
-    }
-    
-    public func atualizarDias(dias: [DiaModel]){
+    public func atualizarGirassois(girassois: [GirassolModel]){
         do {
-            let encodedData = try JSONEncoder().encode(dias)
-            userDefaults.set(encodedData, forKey: "Dias")
+            let encodedData = try JSONEncoder().encode(girassois)
+            userDefaults.set(encodedData, forKey: "Girassois")
         }
         catch {
             print(error)
         }
     }
     
-    func receberCultivoIniciado(){
-        guard let load = userDefaults.object(forKey: "CultivoIniciado") as? Bool else { return }
-        cultivoIniciado = load
-    }
-    
-    func receberData() -> Bool {
-        guard let load = userDefaults.object(forKey: "DataInicial") as? Date else { return false }
-        dataInicial = load
-        return true
-    }
-    
-    func receberDias() {
-        guard let load = userDefaults.object(forKey: "Dias") as? Data else { return }
+    func receberGirassois() {
+        guard let load = userDefaults.object(forKey: "Girassois") as? Data else { return }
         do{
-            let diasDecodados = try JSONDecoder().decode([DiaModel].self, from: load)
-            dias = diasDecodados
+            let girassoisDecodados = try JSONDecoder().decode([GirassolModel].self, from: load)
+            self.girassois = girassoisDecodados
         } catch{
             print(error)
         }
@@ -65,8 +37,6 @@ class UserDefaultsModel {
     }
     
     func clearDataBase(){
-//        userDefaults.removeObject(forKey: "DataInicial")
-        userDefaults.removeObject(forKey: "CultivoIniciado")
-//        userDefaults.removeObject(forKey: "Dias")
+        userDefaults.removeObject(forKey: "Girassois")
     }
 }

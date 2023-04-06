@@ -10,7 +10,7 @@ import Foundation
 struct DiaModel: Hashable, Codable {
     let numero: Int
     var tarefas: [TarefaModel] = []
-    var imagem: String = "" // girassol1 == planta morrendo, girassol2 == planta medio triste, girassol3 == planta feliz
+    var imagem: String = "girassolTriste"
     
     init(dia: Int, tarefas: [Bool]) {
         self.numero = dia

@@ -9,28 +9,32 @@ import Foundation
 import SwiftUI
 
 
-struct GridCellPlantaView: View {
+struct GridCellPlantaView<Destino: View>: View {
+        
+    let screenWidth = UIScreen.main.bounds.size.width
+    let screenHeight = UIScreen.main.bounds.size.height
     
-    @ObservedObject var vm: ViewModel
-    
-    let numeroDia: Int
+    let nomeCorFundo: String
+    let nomeImagem: String
+    let texto: String
+    let destino: Destino
     
     var body: some View {
-        NavigationLink(destination: DetalheDiaView(vm: vm, numeroDia: numeroDia)) {
+        NavigationLink(destination: destino) {
             ZStack {
                 RoundedRectangle(cornerRadius: 25)
-                    .foregroundColor(Color(vm.definirCorBotao(numeroDia: numeroDia)))
+                    .foregroundColor(Color(nomeCorFundo))
                     .shadow(radius: 4, x: 0, y: 4)
                 VStack {
                     Spacer()
-                    Image(vm.dias[numeroDia - 1].imagem)
+                    Image(nomeImagem)
                         .resizable()
-                        .frame(width: vm.screenWidth * 0.4, height: vm.screenHeight * 0.25)
+                        .frame(width: screenWidth * 0.4, height: screenHeight * 0.25)
                         .padding(.bottom, -10)
                     Rectangle()
-                        .frame(width: vm.screenWidth * 0.44, height: vm.screenHeight * 0.0025)
+                        .frame(width: screenWidth * 0.44, height: screenHeight * 0.0025)
                         .foregroundColor(.black)
-                    Text("Dia \(vm.dias[numeroDia - 1].numero)")
+                    Text(texto)
                         .font(.system(size: 28, design: .rounded))
                         .fontWeight(.bold)
                         .foregroundColor(.black)

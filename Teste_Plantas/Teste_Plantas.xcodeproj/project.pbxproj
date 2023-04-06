@@ -20,6 +20,8 @@
 		A772E6D729D3CFC5006CC399 /* CardAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772E6D629D3CFC5006CC399 /* CardAnimationView.swift */; };
 		DF0E348B29D35F76002E6024 /* DetalheConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E348A29D35F76002E6024 /* DetalheConfigView.swift */; };
 		DF38251C29D4C642002F35E8 /* CardInicioCultivoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF38251B29D4C642002F35E8 /* CardInicioCultivoView.swift */; };
+		DF41F3DD29DF497400FD0FF2 /* GirassolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF41F3DC29DF497400FD0FF2 /* GirassolModel.swift */; };
+		DF41F3DF29DF4BA100FD0FF2 /* EscolhaGirassolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF41F3DE29DF4BA100FD0FF2 /* EscolhaGirassolView.swift */; };
 		DF4E6C2D29DB45B700FB3533 /* VideoRega.mov in Resources */ = {isa = PBXBuildFile; fileRef = DF4E6C2B29DB45B700FB3533 /* VideoRega.mov */; };
 		DF4E6C2E29DB45B700FB3533 /* VideoSol.mov in Resources */ = {isa = PBXBuildFile; fileRef = DF4E6C2C29DB45B700FB3533 /* VideoSol.mov */; };
 		DF4E6C3029DB45DC00FB3533 /* VideoPragas.mov in Resources */ = {isa = PBXBuildFile; fileRef = DF4E6C2F29DB45DC00FB3533 /* VideoPragas.mov */; };
@@ -51,6 +53,8 @@
 		A772E6D629D3CFC5006CC399 /* CardAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAnimationView.swift; sourceTree = "<group>"; };
 		DF0E348A29D35F76002E6024 /* DetalheConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheConfigView.swift; sourceTree = "<group>"; };
 		DF38251B29D4C642002F35E8 /* CardInicioCultivoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInicioCultivoView.swift; sourceTree = "<group>"; };
+		DF41F3DC29DF497400FD0FF2 /* GirassolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GirassolModel.swift; sourceTree = "<group>"; };
+		DF41F3DE29DF4BA100FD0FF2 /* EscolhaGirassolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscolhaGirassolView.swift; sourceTree = "<group>"; };
 		DF4E6C2B29DB45B700FB3533 /* VideoRega.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = VideoRega.mov; sourceTree = "<group>"; };
 		DF4E6C2C29DB45B700FB3533 /* VideoSol.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = VideoSol.mov; sourceTree = "<group>"; };
 		DF4E6C2F29DB45DC00FB3533 /* VideoPragas.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = VideoPragas.mov; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				DF76230629D21EDD0098A069 /* UserDefaultsModel.swift */,
+				DF41F3DC29DF497400FD0FF2 /* GirassolModel.swift */,
 				EBFD5C5F29D22CF90013A8A2 /* DiaModel.swift */,
 				DF7E515929D3C34A001553D3 /* TarefaModel.swift */,
 			);
@@ -152,6 +157,7 @@
 			children = (
 				A7413FA229CF9E230012CBCD /* SplashScreen.swift */,
 				A7413FA629D215450012CBCD /* HomeView.swift */,
+				DF41F3DE29DF4BA100FD0FF2 /* EscolhaGirassolView.swift */,
 				A7413FAA29D2172B0012CBCD /* DiarioView.swift */,
 				DF7E515529D3B0F8001553D3 /* DetalheDiaView.swift */,
 				A7413FAC29D217890012CBCD /* AprendaCuidarView.swift */,
@@ -262,6 +268,8 @@
 				DF38251C29D4C642002F35E8 /* CardInicioCultivoView.swift in Sources */,
 				A7413FAD29D217890012CBCD /* AprendaCuidarView.swift in Sources */,
 				DF76230729D21EDD0098A069 /* UserDefaultsModel.swift in Sources */,
+				DF41F3DF29DF4BA100FD0FF2 /* EscolhaGirassolView.swift in Sources */,
+				DF41F3DD29DF497400FD0FF2 /* GirassolModel.swift in Sources */,
 				A7413FA329CF9E230012CBCD /* SplashScreen.swift in Sources */,
 				A772E6CD29D37A31006CC399 /* BotaoConfigAprenda.swift in Sources */,
 				A7413FAF29D2184D0012CBCD /* ConfigView.swift in Sources */,
