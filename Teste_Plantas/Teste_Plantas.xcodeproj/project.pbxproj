@@ -18,6 +18,7 @@
 		A772E6CD29D37A31006CC399 /* BotaoConfigAprenda.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772E6CC29D37A31006CC399 /* BotaoConfigAprenda.swift */; };
 		A772E6D329D3BF10006CC399 /* DetalheAprendaCuidarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772E6D229D3BF10006CC399 /* DetalheAprendaCuidarView.swift */; };
 		A772E6D729D3CFC5006CC399 /* CardAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772E6D629D3CFC5006CC399 /* CardAnimationView.swift */; };
+		A7A8068329DF4B2F009F79CF /* NovoGirassolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A8068229DF4B2F009F79CF /* NovoGirassolView.swift */; };
 		DF0E348B29D35F76002E6024 /* DetalheConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E348A29D35F76002E6024 /* DetalheConfigView.swift */; };
 		DF38251C29D4C642002F35E8 /* CardInicioCultivoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF38251B29D4C642002F35E8 /* CardInicioCultivoView.swift */; };
 		DF4E6C2D29DB45B700FB3533 /* VideoRega.mov in Resources */ = {isa = PBXBuildFile; fileRef = DF4E6C2B29DB45B700FB3533 /* VideoRega.mov */; };
@@ -49,6 +50,7 @@
 		A772E6CC29D37A31006CC399 /* BotaoConfigAprenda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoConfigAprenda.swift; sourceTree = "<group>"; };
 		A772E6D229D3BF10006CC399 /* DetalheAprendaCuidarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheAprendaCuidarView.swift; sourceTree = "<group>"; };
 		A772E6D629D3CFC5006CC399 /* CardAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAnimationView.swift; sourceTree = "<group>"; };
+		A7A8068229DF4B2F009F79CF /* NovoGirassolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovoGirassolView.swift; sourceTree = "<group>"; };
 		DF0E348A29D35F76002E6024 /* DetalheConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheConfigView.swift; sourceTree = "<group>"; };
 		DF38251B29D4C642002F35E8 /* CardInicioCultivoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInicioCultivoView.swift; sourceTree = "<group>"; };
 		DF4E6C2B29DB45B700FB3533 /* VideoRega.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = VideoRega.mov; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				DF76230B29D221B60098A069 /* Views */,
 				A7413F9829CE15790012CBCD /* Assets.xcassets */,
 				A7413F9A29CE15790012CBCD /* Preview Content */,
+				A7A8068229DF4B2F009F79CF /* NovoGirassolView.swift */,
 			);
 			path = Teste_Plantas;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 			files = (
 				DF0E348B29D35F76002E6024 /* DetalheConfigView.swift in Sources */,
 				EBFD5C5E29D22CE10013A8A2 /* GridCellPlantaView.swift in Sources */,
+				A7A8068329DF4B2F009F79CF /* NovoGirassolView.swift in Sources */,
 				A7413FAB29D2172B0012CBCD /* DiarioView.swift in Sources */,
 				A772E6D729D3CFC5006CC399 /* CardAnimationView.swift in Sources */,
 				DF76230A29D2219C0098A069 /* ViewModel.swift in Sources */,
