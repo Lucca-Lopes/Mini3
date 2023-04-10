@@ -19,6 +19,7 @@
 		A772E6D329D3BF10006CC399 /* DetalheAprendaCuidarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772E6D229D3BF10006CC399 /* DetalheAprendaCuidarView.swift */; };
 		A772E6D729D3CFC5006CC399 /* CardAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772E6D629D3CFC5006CC399 /* CardAnimationView.swift */; };
 		DF0E348B29D35F76002E6024 /* DetalheConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E348A29D35F76002E6024 /* DetalheConfigView.swift */; };
+		DF23559B29E4A129000B85CB /* NovoGirassolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF23559A29E4A129000B85CB /* NovoGirassolView.swift */; };
 		DF38251C29D4C642002F35E8 /* CardInicioCultivoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF38251B29D4C642002F35E8 /* CardInicioCultivoView.swift */; };
 		DF41F3DD29DF497400FD0FF2 /* GirassolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF41F3DC29DF497400FD0FF2 /* GirassolModel.swift */; };
 		DF41F3DF29DF4BA100FD0FF2 /* EscolhaGirassolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF41F3DE29DF4BA100FD0FF2 /* EscolhaGirassolView.swift */; };
@@ -52,6 +53,7 @@
 		A772E6D229D3BF10006CC399 /* DetalheAprendaCuidarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheAprendaCuidarView.swift; sourceTree = "<group>"; };
 		A772E6D629D3CFC5006CC399 /* CardAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAnimationView.swift; sourceTree = "<group>"; };
 		DF0E348A29D35F76002E6024 /* DetalheConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheConfigView.swift; sourceTree = "<group>"; };
+		DF23559A29E4A129000B85CB /* NovoGirassolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovoGirassolView.swift; sourceTree = "<group>"; };
 		DF38251B29D4C642002F35E8 /* CardInicioCultivoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInicioCultivoView.swift; sourceTree = "<group>"; };
 		DF41F3DC29DF497400FD0FF2 /* GirassolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GirassolModel.swift; sourceTree = "<group>"; };
 		DF41F3DE29DF4BA100FD0FF2 /* EscolhaGirassolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscolhaGirassolView.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				A7413FA229CF9E230012CBCD /* SplashScreen.swift */,
 				A7413FA629D215450012CBCD /* HomeView.swift */,
 				DF41F3DE29DF4BA100FD0FF2 /* EscolhaGirassolView.swift */,
+				DF23559A29E4A129000B85CB /* NovoGirassolView.swift */,
 				A7413FAA29D2172B0012CBCD /* DiarioView.swift */,
 				DF7E515529D3B0F8001553D3 /* DetalheDiaView.swift */,
 				A7413FAC29D217890012CBCD /* AprendaCuidarView.swift */,
@@ -265,6 +268,7 @@
 				DF76230A29D2219C0098A069 /* ViewModel.swift in Sources */,
 				DF7E515829D3B700001553D3 /* TarefaRowView.swift in Sources */,
 				DFCACD2A29D30B33007F8838 /* BotaoHome.swift in Sources */,
+				DF23559B29E4A129000B85CB /* NovoGirassolView.swift in Sources */,
 				DF38251C29D4C642002F35E8 /* CardInicioCultivoView.swift in Sources */,
 				A7413FAD29D217890012CBCD /* AprendaCuidarView.swift in Sources */,
 				DF76230729D21EDD0098A069 /* UserDefaultsModel.swift in Sources */,

@@ -18,6 +18,7 @@ class ViewModel: ObservableObject {
     var dateComponents = DateComponents()
     
     public init() {
+        self.girassois = dados.girassois
         self.dateComponents.timeZone = TimeZone.current
         self.dateComponents.calendar = Calendar.current
         verificarDiaAtual()
@@ -34,25 +35,15 @@ class ViewModel: ObservableObject {
     }
    
     private func verificarDiaAtual(){
-        for i in 0...self.girassois.count {
-            let diaAtualCultivo: Int = dateComponents.calendar!.numberOfDaysBetween(self.girassois[i].dataInicio, to: Date())
-            if diaAtualCultivo > self.girassois[i].dias.count {
-                while self.girassois[i].dias.count < diaAtualCultivo {
-                    let tarefasNovoDia = designarTarefas(dia: self.girassois[i].dias.count + 1)
-                    self.girassois[i].dias.append(.init(dia: self.girassois[i].dias.count + 1, tarefas: tarefasNovoDia))
+        if self.girassois.count > 0 {
+            for i in 0...self.girassois.count-1 {
+                let diaAtualCultivo: Int = dateComponents.calendar!.numberOfDaysBetween(self.girassois[i].dataInicio, to: Date())
+                if diaAtualCultivo > self.girassois[i].dias.count {
+                    while self.girassois[i].dias.count < diaAtualCultivo {
+                        self.girassois[i].dias.append(.init(dia: self.girassois[i].dias.count + 1))
+                    }
                 }
             }
-        }
-    }
-    
-    private func designarTarefas(dia: Int) -> [Bool] {
-        switch dia % 7 {
-        case 1:
-            return [false, false, false]
-        case 2, 4, 6:
-            return [false, false]
-        default:
-            return [false]
         }
     }
     
@@ -66,18 +57,6 @@ class ViewModel: ObservableObject {
             return "corFundoBotao"
         }
     }
-    
-    public func definirIconeTarefa(indexGirassol: Int, numeroDia: Int, indexTarefa: Int) -> String{
-        switch self.girassois[indexGirassol].dias[numeroDia - 1].tarefas[indexTarefa].titulo {
-        case "Coloque no Sol":
-            return "sun.max"
-        case "Procure Pragas":
-            return "ant"
-        default:
-            return "drop"
-        }
-    }
-    
 }
 
 extension Calendar {

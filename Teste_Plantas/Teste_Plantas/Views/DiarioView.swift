@@ -10,6 +10,7 @@ import SwiftUI
 struct DiarioView: View {
     
     @ObservedObject var vm: ViewModel
+    let indexGirassol: Int
     
     @Environment(\.dismiss) private var dismiss
     
@@ -17,8 +18,8 @@ struct DiarioView: View {
 //        if vm.cultivoIniciado {
             ScrollView {
                 LazyVGrid(columns: [GridItem(.flexible(), spacing: 50), GridItem(.flexible(), spacing: 50)], alignment: .center, spacing: 30) {
-                    ForEach(vm.dias, id: \.numero) { dia in
-                        GridCellPlantaView(nomeCorFundo: vm.definirCorBotao(nomeImagem: dia.imagem), nomeImagem: dia.imagem, texto: "Dia \(dia.numero)", destino: DetalheDiaView(vm: vm, numeroDia: dia.numero))
+                    ForEach(vm.girassois[indexGirassol].dias, id: \.numero) { dia in
+                        GridCellPlantaView(nomeCorFundo: vm.definirCorBotao(nomeImagem: dia.imagem), nomeImagem: dia.imagem, texto: "Dia \(dia.numero)", destino: DetalheDiaView(vm: vm, indexGirassol: indexGirassol, indexDia: vm.girassois[indexGirassol].dias.firstIndex(of: dia) ?? 0))
                     }
                 }
                 .padding(20)

@@ -12,6 +12,7 @@ class UserDefaultsModel {
     var girassois: [GirassolModel] = []
     
     init(){
+//        clearDataBase()
         receberGirassois()
     }
     

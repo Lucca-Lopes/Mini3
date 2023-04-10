@@ -12,13 +12,15 @@ struct DetalheDiaView: View {
     @ObservedObject var vm: ViewModel
     @Environment(\.dismiss) private var dismiss
     
-    let numeroDia: Int
+    let indexGirassol: Int
+    let indexDia: Int
     
     var body: some View {
         ScrollView {
             LazyVStack {
-                ForEach(vm.dias[numeroDia - 1].tarefas, id: \.hashValue){ tarefa in
-                    TarefaRowView(vm: vm, numeroDia: numeroDia, indexTarefa: vm.dias[numeroDia - 1].tarefas.firstIndex(of: tarefa) ?? 0)
+                ForEach(vm.girassois[indexGirassol].dias[indexDia].tarefas, id: \.hashValue){ tarefa in
+//                    TarefaRowView(vm: vm, numeroDia: indexDia, indexTarefa: vm.dias[numeroDia - 1].tarefas.firstIndex(of: tarefa) ?? 0)
+                    TarefaRowView(vm: vm, indexGirassol: indexGirassol, indexDia: indexDia, indexTarefa: vm.girassois[indexGirassol].dias[indexDia].tarefas.firstIndex(of: tarefa) ?? 0, tarefa: tarefa)
                 }
             }
         }

@@ -16,25 +16,32 @@ struct EscolhaGirassolView: View {
     var body: some View {
         ScrollView {
             LazyVGrid(columns: [GridItem(.flexible(), spacing: 50), GridItem(.flexible(), spacing: 50)], alignment: .center, spacing: 30) {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 25)
-                        .foregroundColor(Color("corFundoBotao"))
-                        .shadow(radius: 4, x: 0, y: 4)
-                    VStack {
-                        Spacer()
-                        Image(systemName: "plus")
-                            .font(.system(size: 48))
-                            .foregroundColor(Color("corTexto"))
-                        Text("Novo")
-                            .font(.system(size: 28, design: .rounded))
-                            .fontWeight(.bold)
-                            .foregroundColor(.black)
-                            .padding(.top, -10)
-                            .padding(7.5)
+                NavigationLink{
+                    NovoGirassolView(vm: vm)
+                } label: {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 25)
+                            .foregroundColor(Color("corFundoBotao"))
+                            .shadow(radius: 4, x: 0, y: 4)
+                        VStack {
+//                            Spacer()
+                            Image(systemName: "plus")
+                                .font(.system(size: 48, weight: .bold))
+                                .foregroundColor(Color("corTexto"))
+                                .padding(.top, 70)
+                                .padding(.bottom, 40)
+                            Text("Novo")
+                                .font(.system(size: 28, design: .rounded))
+                                .fontWeight(.bold)
+                                .foregroundColor(.black)
+                                .padding(.bottom)
+//                                .padding(7.5)
+                        }
                     }
                 }
+                
                 ForEach(vm.girassois, id: \.nome) { girassol in
-                    GridCellPlantaView(nomeCorFundo: "corFundoBotao", nomeImagem: "girassolFeliz", texto: girassol.nome, destino: DiarioView(vm: vm))
+                    GridCellPlantaView(nomeCorFundo: "corFundoBotao", nomeImagem: "girassolFeliz", texto: girassol.nome, destino: DiarioView(vm: vm, indexGirassol: vm.girassois.firstIndex(of: girassol) ?? 0))
                 }
             }
             .padding(20)

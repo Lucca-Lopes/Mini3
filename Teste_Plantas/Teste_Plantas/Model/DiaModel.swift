@@ -12,10 +12,21 @@ struct DiaModel: Hashable, Codable {
     var tarefas: [TarefaModel] = []
     var imagem: String = "girassolTriste"
     
-    init(dia: Int, tarefas: [Bool]) {
+    init(dia: Int) {
         self.numero = dia
-        self.tarefas = definirTarefas(dia: dia, tarefas: tarefas)
+        self.tarefas = definirTarefas(dia: dia, tarefas: definirQuantidadeTarefas(dia: dia))
         definirImagem()
+    }
+    
+    private func definirQuantidadeTarefas(dia: Int) -> [Bool] {
+        switch dia % 7 {
+        case 1:
+            return [false, false, false]
+        case 2, 4, 6:
+            return [false, false]
+        default:
+            return [false]
+        }
     }
     
     private func definirTarefas(dia: Int, tarefas: [Bool]) -> [TarefaModel] {

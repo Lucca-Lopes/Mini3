@@ -12,4 +12,11 @@ struct GirassolModel: Hashable, Codable {
     let nomeImagem: String
     var dias: [DiaModel] = []
     let dataInicio: Date
+    
+    init(nome: String) {
+        self.nome = nome
+        self.nomeImagem = "girassolFeliz"
+        self.dias = [.init(dia: 1)]
+        self.dataInicio = Date()
+    }
 }
