@@ -17,7 +17,7 @@ struct DiarioView: View {
         if vm.cultivoIniciado {
             ScrollView {
                 LazyVGrid(columns: [GridItem(.flexible(), spacing: 50), GridItem(.flexible(), spacing: 50)], alignment: .center, spacing: 30) {
-                    ForEach(vm.dias, id: \.numero) { dia in
+                    ForEach(vm.dias.reversed(), id: \.numero) { dia in
                         GridCellPlantaView(vm: vm, numeroDia: dia.numero)
                     }
                 }
