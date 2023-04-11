@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct NovoGirassolView: View {
     let screenWidth = UIScreen.main.bounds.size.width
@@ -33,13 +34,18 @@ struct NovoGirassolView: View {
                 }
            
             TextField("Nome do Girassol", text: $textFieldText, prompt: Text("Nome do Girassol").font(.system(size: 20, weight: .bold, design: .rounded)).foregroundColor(Color("corTextoTextfield")))
+                .autocorrectionDisabled(true)
                 .font(.system(size: 20, weight: .bold, design: .rounded))
                 .foregroundColor(Color("corTextoTextfield"))
                 .multilineTextAlignment(.center)
                 .padding(.horizontal)
                 .padding(.vertical, 20)
                 .background(Color("corFundoTextfield").cornerRadius(12))
-                
+                .onReceive(Just(textFieldText)) { _ in
+                        if textFieldText.count > 14 {
+                            textFieldText = String(textFieldText.prefix(14))
+                        }
+                    }
                 .ignoresSafeArea(.keyboard)
             
             Spacer(minLength: 5)

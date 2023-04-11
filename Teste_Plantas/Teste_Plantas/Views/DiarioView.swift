@@ -18,7 +18,7 @@ struct DiarioView: View {
 //        if vm.cultivoIniciado {
             ScrollView {
                 LazyVGrid(columns: [GridItem(.flexible(), spacing: 50), GridItem(.flexible(), spacing: 50)], alignment: .center, spacing: 30) {
-                    ForEach(vm.girassois[indexGirassol].dias, id: \.numero) { dia in
+                    ForEach(vm.girassois[indexGirassol].dias.reversed(), id: \.numero) { dia in
                         GridCellPlantaView(nomeCorFundo: vm.definirCorBotao(nomeImagem: dia.imagem), nomeImagem: dia.imagem, texto: "Dia \(dia.numero)", destino: DetalheDiaView(vm: vm, indexGirassol: indexGirassol, indexDia: vm.girassois[indexGirassol].dias.firstIndex(of: dia) ?? 0))
                     }
                 }
