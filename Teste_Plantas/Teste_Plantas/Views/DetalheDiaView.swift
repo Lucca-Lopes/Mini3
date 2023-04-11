@@ -19,7 +19,6 @@ struct DetalheDiaView: View {
         ScrollView {
             LazyVStack {
                 ForEach(vm.girassois[indexGirassol].dias[indexDia].tarefas, id: \.hashValue){ tarefa in
-//                    TarefaRowView(vm: vm, numeroDia: indexDia, indexTarefa: vm.dias[numeroDia - 1].tarefas.firstIndex(of: tarefa) ?? 0)
                     TarefaRowView(vm: vm, indexGirassol: indexGirassol, indexDia: indexDia, indexTarefa: vm.girassois[indexGirassol].dias[indexDia].tarefas.firstIndex(of: tarefa) ?? 0, tarefa: tarefa)
                 }
             }
