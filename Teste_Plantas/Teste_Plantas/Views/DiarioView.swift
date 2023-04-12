@@ -9,16 +9,17 @@ import SwiftUI
 
 struct DiarioView: View {
     
-    @ObservedObject var vm = ViewModel()
+    @ObservedObject var vm: ViewModel
+    let indexGirassol: Int
     
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
-        if vm.cultivoIniciado {
+//        if vm.cultivoIniciado {
             ScrollView {
                 LazyVGrid(columns: [GridItem(.flexible(), spacing: 50), GridItem(.flexible(), spacing: 50)], alignment: .center, spacing: 30) {
-                    ForEach(vm.dias, id: \.numero) { dia in
-                        GridCellPlantaView(vm: vm, numeroDia: dia.numero)
+                    ForEach(vm.girassois[indexGirassol].dias.reversed(), id: \.numero) { dia in
+                        GridCellPlantaView(nomeCorFundo: vm.definirCorBotao(nomeImagem: dia.imagem), nomeImagem: dia.imagem, texto: "Dia \(dia.numero)", destino: DetalheDiaView(vm: vm, indexGirassol: indexGirassol, indexDia: vm.girassois[indexGirassol].dias.firstIndex(of: dia) ?? 0))
                     }
                 }
                 .padding(20)
@@ -48,32 +49,32 @@ struct DiarioView: View {
                     })
                 }
             }
-        }
-        else {
-            VStack {
-                CardPlantaInicioView(vm: vm, title: "Comece a cuidar do Gira!")
-                    .padding(.top)
-                Spacer()
-            }
-            .navigationBarBackButtonHidden(true)
-            .background {
-                Image("backgroundImage")
-                    .resizable()
-                    .ignoresSafeArea()
-                    .frame(width: vm.screenWidth, height: vm.screenHeight * 1.15, alignment: .center)
-            }
-            .navigationBarTitleDisplayMode(.large)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: {
-                        dismiss.callAsFunction()
-                    }, label: {
-                        Image(systemName: "chevron.left")
-                            .font(.system(size: 23, weight: .heavy))
-                            .foregroundColor(Color("corFundoBotao"))
-                    })
-                }
-            }
-        }
+//        }
+//        else {
+//            VStack {
+//                CardPlantaInicioView(vm: vm, title: "Comece a cuidar do Gira!")
+//                    .padding(.top)
+//                Spacer()
+//            }
+//            .navigationBarBackButtonHidden(true)
+//            .background {
+//                Image("backgroundImage")
+//                    .resizable()
+//                    .ignoresSafeArea()
+//                    .frame(width: vm.screenWidth, height: vm.screenHeight * 1.15, alignment: .center)
+//            }
+//            .navigationBarTitleDisplayMode(.large)
+//            .toolbar {
+//                ToolbarItem(placement: .navigationBarLeading) {
+//                    Button(action: {
+//                        dismiss.callAsFunction()
+//                    }, label: {
+//                        Image(systemName: "chevron.left")
+//                            .font(.system(size: 23, weight: .heavy))
+//                            .foregroundColor(Color("corFundoBotao"))
+//                    })
+//                }
+//            }
+//        }
     }
 }

@@ -15,7 +15,7 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             VStack{
-                BotaoHome(screenHeight: screenHeight, screenWidth: screenWidth, nextView: DiarioView(), nomeIcone: "girassolOculos", textoBotao: "Diário", imagemWidth: screenWidth * 0.4, imagemHeight: screenHeight * 0.25, tamanhoFonte: 36)
+                BotaoHome(screenHeight: screenHeight, screenWidth: screenWidth, nextView: EscolhaGirassolView(), nomeIcone: "girassolOculos", textoBotao: "Diário", imagemWidth: screenWidth * 0.4, imagemHeight: screenHeight * 0.25, tamanhoFonte: 36)
                 .padding(.vertical, 50)
                 BotaoHome(screenHeight: screenHeight, screenWidth: screenWidth, nextView: AprendaCuidarView(), nomeIcone: "girassolAgua", textoBotao: "Aprenda a cuidar", imagemWidth: screenWidth * 0.4, imagemHeight: screenHeight * 0.25, tamanhoFonte: 30)
                 Spacer()

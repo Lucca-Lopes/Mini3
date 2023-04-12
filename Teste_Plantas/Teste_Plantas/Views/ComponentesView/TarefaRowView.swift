@@ -8,25 +8,26 @@
 import SwiftUI
 
 struct TarefaRowView: View {
-    
-    @ObservedObject var vm: ViewModel
-    
-    let numeroDia: Int
-    let indexTarefa: Int
-    
     let screenWidth = UIScreen.main.bounds.size.width
     let screenHeight = UIScreen.main.bounds.size.height
     
+    @ObservedObject var vm: ViewModel
+    
+    let indexGirassol: Int
+    let indexDia: Int
+    let indexTarefa: Int
+    let tarefa: TarefaModel
+    
     var body: some View {
         Button {
-            vm.atualizarTarefa(numeroDia: numeroDia, indexTarefa: indexTarefa)
+            vm.atualizarTarefa(indexGirassol: indexGirassol, indexDia: indexDia, indexTarefa: indexTarefa)
         } label: {
             ZStack {
                 RoundedRectangle(cornerRadius: 25)
                     .foregroundColor(Color("corFundoBotao"))
                     .padding(.vertical, -10)
                 HStack {
-                    Text(vm.dias[numeroDia - 1].tarefas[indexTarefa].titulo)
+                    Text(tarefa.titulo)
                         .font(.custom("Purple Smile", size: 32))
                         .fontWeight(.regular)
                         .foregroundColor(Color("corTexto"))
@@ -36,7 +37,7 @@ struct TarefaRowView: View {
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
                             .frame(width: screenWidth * 0.2, height: screenHeight * 0.1)
-                            .foregroundColor(vm.dias[numeroDia - 1].tarefas[indexTarefa].concluida ? Color("corTexto") : Color("corFundoTriste"))
+                            .foregroundColor(vm.girassois[indexGirassol].dias[indexDia].tarefas[indexTarefa].concluida ? Color("corTexto") : Color("corFundoTriste"))
                             .shadow(radius: 4, x: 0, y: 4)
 //                            .overlay(
 //                                RoundedRectangle(cornerRadius: 10)
@@ -51,7 +52,7 @@ struct TarefaRowView: View {
 //                                        RoundedRectangle(cornerRadius: 10)
 //                                    )
 //                            )
-                        Image(systemName: vm.definirIconeTarefa(numeroDia: numeroDia, indexTarefa: indexTarefa))
+                        Image(systemName: tarefa.nomeIcone)
                             .font(.system(size: 36))
                             .foregroundColor(Color("corFundoBotao"))
                     }
@@ -63,9 +64,3 @@ struct TarefaRowView: View {
         .padding(30)
     }
 }
-
-//struct TarefaRowView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TarefaRowView()
-//    }
-//}
