@@ -14,7 +14,7 @@ struct CardAnimationView: View {
     
     let textoDescricao: String
     let nomeVideo: String
-    var videoPlayer: AVPlayer
+    @State var videoPlayer: AVPlayer
     
     init(textoDescricao: String, nomeVideo: String) {
         self.textoDescricao = textoDescricao
@@ -22,24 +22,24 @@ struct CardAnimationView: View {
         self.videoPlayer = AVPlayer(url: Bundle.main.url(forResource: nomeVideo, withExtension: "mov")!)
         self.videoPlayer.play()
     }
-        
+    
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 25)
                 .foregroundColor(Color("corFundoBotao"))
                 .shadow(radius: 4, x: 0, y: 4)
             VStack {
-                    VideoPlayer(player: videoPlayer)
-                        .frame(height: screenHeight * 0.419)
-                        .cornerRadius(25)
-                        .padding(20)
-                    Spacer()
-                    Text(textoDescricao)
-                        .font(.system(size: 22, weight: .semibold, design: .rounded))
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(Color("corTexto"))
-                        .padding(.top, -30)
-                        .padding(20)
+                VideoPlayer(player: videoPlayer)
+                    .frame(height: screenHeight * 0.419)
+                    .cornerRadius(25)
+                    .padding(20)
+                Spacer()
+                Text(textoDescricao)
+                    .font(.system(size: 22, weight: .semibold, design: .rounded))
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(Color("corTexto"))
+                    .padding(.top, -30)
+                    .padding(20)
                 Spacer()
             }
         }

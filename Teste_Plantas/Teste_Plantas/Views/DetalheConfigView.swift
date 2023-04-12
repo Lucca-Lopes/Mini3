@@ -18,7 +18,7 @@ struct DetalheConfigView: View {
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
-        ScrollView(){
+        ScrollView {
             LazyVStack {
                 Text(textoDescricao)
                     .font(.system(size: 20, weight: .semibold, design: .rounded))

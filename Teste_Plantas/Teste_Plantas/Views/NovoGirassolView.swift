@@ -80,9 +80,11 @@ struct NovoGirassolView: View {
             }
             ToolbarItem(placement: .navigationBarTrailing){
                 Button {
-                    vm.girassois.append(GirassolModel(nome: self.textFieldText))
-                    vm.salvarDados()
-                    dismiss.callAsFunction()
+                    if !self.textFieldText.isEmpty {
+                        vm.girassois.append(GirassolModel(nome: self.textFieldText))
+                        vm.salvarDados()
+                        dismiss.callAsFunction()
+                    }
                 } label: {
                     Text("OK")
                         .font(.custom("Purple Smile", size: 24))

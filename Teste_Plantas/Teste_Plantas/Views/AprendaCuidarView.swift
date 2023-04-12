@@ -16,7 +16,7 @@ struct AprendaCuidarView: View {
     
     var body: some View {
         VStack{
-            BotaoConfigAprenda(nextView: DetalheAprendaCuidarView(nomeView: "Rega", textoDescricao: "O Gira gosta de água mas não muito, afunde a ponta do dedo na terra, se sair suja ainda não é hora de regar", nomeVideo: "VideoRega"), nomeIcone: "drop", textoBotao: "Rega")
+            BotaoConfigAprenda(nextView: DetalheAprendaCuidarView(nomeView: "Rega", textoDescricao: "O Gira gosta de água mas não muito, afunde a ponta do dedo na terra, se sair suja ainda não é hora de regar \n\nAproximadamente 70ml de água", nomeVideo: "VideoRega"), nomeIcone: "drop", textoBotao: "Rega")
             
             BotaoConfigAprenda(nextView: DetalheAprendaCuidarView(nomeView: "Sol", textoDescricao: "O Gira gosta muito de sol, deixe ele em um lugar com iluminação natural.", nomeVideo: "VideoSol"), nomeIcone: "sun.max", textoBotao: "Sol")
             

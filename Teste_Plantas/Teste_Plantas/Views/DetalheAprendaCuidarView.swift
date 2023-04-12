@@ -19,8 +19,10 @@ struct DetalheAprendaCuidarView: View {
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
-        VStack(alignment: .center) {
-            CardAnimationView(textoDescricao: textoDescricao, nomeVideo: nomeVideo)
+        ScrollView {
+            VStack(alignment: .center) {
+                CardAnimationView(textoDescricao: textoDescricao, nomeVideo: nomeVideo)
+            }
         }
         .navigationBarBackButtonHidden(true)
         .background {
