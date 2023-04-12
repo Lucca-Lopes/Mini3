@@ -40,6 +40,7 @@ struct BotaoHome<TargetView: View>: View {
                         .kerning(0.5)
                         .padding(.trailing, 35)
                         .foregroundColor(Color("corTexto"))
+                        .lineLimit(2)
                     Spacer()
                 }
             }

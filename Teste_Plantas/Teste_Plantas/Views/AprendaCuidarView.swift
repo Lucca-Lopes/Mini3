@@ -20,7 +20,7 @@ struct AprendaCuidarView: View {
             
             BotaoConfigAprenda(nextView: DetalheAprendaCuidarView(nomeView: "Sol", textoDescricao: "O Gira gosta muito de sol, deixe ele em um lugar com iluminação natural.", nomeVideo: "VideoSol"), nomeIcone: "sun.max", textoBotao: "Sol")
             
-            BotaoConfigAprenda(nextView: DetalheAprendaCuidarView(nomeView: "Pragas", textoDescricao: "Procure matinhos na terra do Gira. \n\nSe tiver algum, retire para o Gira crescer forte.", nomeVideo: "VideoPragas"), nomeIcone: "ant", textoBotao: "Procure pragas")
+            BotaoConfigAprenda(nextView: DetalheAprendaCuidarView(nomeView: "Pragas", textoDescricao: "Procure matinhos na terra do Gira. \n\nSe tiver algum, retire para o Gira crescer forte.", nomeVideo: "VideoPragas"), nomeIcone: "ant", textoBotao: "Pragas")
         }
         .navigationBarBackButtonHidden(true)
         .background {

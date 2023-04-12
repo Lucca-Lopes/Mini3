@@ -30,7 +30,7 @@ struct DiaModel: Hashable, Codable {
     private func definirTarefas(dia: Int, tarefas: [Bool]) -> [TarefaModel] {
         switch dia % 7 {
         case 1, 4:
-            return [.init(titulo: "Coloque no Sol", concluida: tarefas[0]), .init(titulo: "Rega", concluida: tarefas[1]), .init(titulo: "Procure Pragas", concluida: tarefas[2])]
+            return [.init(titulo: "Coloque no Sol", concluida: tarefas[0]), .init(titulo: "Regue", concluida: tarefas[1]), .init(titulo: "Procure Pragas", concluida: tarefas[2])]
         default:
             return [.init(titulo: "Coloque no Sol", concluida: tarefas[0]), .init(titulo: "Rega", concluida: tarefas[1])]
         }

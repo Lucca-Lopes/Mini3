@@ -33,6 +33,7 @@ struct CardAnimationView: View {
                     .frame(height: screenHeight * 0.419)
                     .cornerRadius(25)
                     .padding(20)
+                    
                 Spacer()
                 Text(textoDescricao)
                     .font(.system(size: 22, weight: .semibold, design: .rounded))
