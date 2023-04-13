@@ -31,7 +31,7 @@ struct EscolhaGirassolView: View {
 //                                .bold()
 //                                .resizable()
                                 .frame(width: vm.screenWidth * 0.4, height: vm.screenHeight * 0.25)
-                                .padding(.bottom, -10)
+                                .padding(.top, vm.screenHeight * 0.005)
                             Rectangle()
                                 .frame(width: vm.screenWidth * 0.44, height: vm.screenHeight * 0.0025)
                                 .foregroundColor(.black)
