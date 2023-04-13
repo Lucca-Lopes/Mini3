@@ -46,7 +46,16 @@ struct DetalheDiaView: View {
                         .foregroundColor(Color("corFundoBotao"))
                 })
             }
-
+            ToolbarItem(placement: .navigationBarTrailing) {
+                NavigationLink(destination: {
+                    AprendaCuidarView()
+                }, label: {
+                    Image("botaoInterrogacao")
+                        .resizable()
+                        .frame(width: vm.screenWidth * 0.1, height: vm.screenWidth * 0.1)
+                        .accessibilityLabel(Text("Aprenda a cuidar"))
+                })
+            }
         }
     }
 }

@@ -48,7 +48,5 @@ struct DetalheAprendaCuidarView: View {
                 })
             }
         }
-
     }
-    
 }

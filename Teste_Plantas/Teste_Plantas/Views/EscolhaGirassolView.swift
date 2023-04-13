@@ -11,6 +11,8 @@ struct EscolhaGirassolView: View {
     
     @ObservedObject var vm = ViewModel()
     
+    @State var editando: Bool = false
+    
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
@@ -44,9 +46,28 @@ struct EscolhaGirassolView: View {
                         }
                     }
                 }
-                
+                .accessibilityLabel(Text("Criar novo girassol"))
                 ForEach(vm.girassois, id: \.nome) { girassol in
-                    GridCellPlantaView(nomeCorFundo: "corFundoBotao", nomeImagem: "girassolFeliz", texto: girassol.nome, destino: DiarioView(vm: vm, indexGirassol: vm.girassois.firstIndex(of: girassol) ?? 0))
+                    ZStack {
+                        GridCellPlantaView(nomeCorFundo: "corFundoBotao", nomeImagem: "girassolFeliz", texto: girassol.nome, destino: DiarioView(vm: vm, indexGirassol: vm.girassois.firstIndex(of: girassol) ?? 0))
+                            .accessibilityLabel("Girassol \(girassol.nome)")
+                        if self.editando {
+                            VStack {
+                                HStack{
+                                    Button {
+                                        vm.girassois.remove(at: vm.girassois.firstIndex(of: girassol) ?? 0)
+                                        vm.salvarDados()
+                                    } label: {
+                                        Image("remove")
+                                            .resizable()
+                                            .frame(width: vm.screenWidth * 0.1, height: vm.screenWidth * 0.1)
+                                    }
+                                    Spacer()
+                                }
+                                Spacer()
+                            }
+                        }
+                    }
                 }
             }
             .padding(20)
@@ -74,6 +95,16 @@ struct EscolhaGirassolView: View {
                         .font(.system(size: 23, weight: .heavy))
                         .foregroundColor(Color("corFundoBotao"))
                 })
+            }
+            ToolbarItem(placement: .navigationBarTrailing){
+                Button {
+                    self.editando.toggle()
+                } label: {
+                    Image(systemName: "pencil.circle")
+                        .resizable()
+                        .frame(width: vm.screenWidth * 0.1, height: vm.screenWidth * 0.1)
+                        .foregroundColor(Color("corFundoBotao"))
+                }
             }
         }
     }

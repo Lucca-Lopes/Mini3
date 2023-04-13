@@ -47,6 +47,7 @@ struct TarefaRowView: View {
                 .padding(20)
             }
         }
+        .accessibilityLabel(Text("\(tarefa.titulo), \(vm.girassois[indexGirassol].dias[indexDia].tarefas[indexTarefa].concluida ? "feita" : "não feita")"))
         .padding(30)
     }
 }

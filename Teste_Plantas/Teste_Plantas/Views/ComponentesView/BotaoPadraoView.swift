@@ -28,5 +28,4 @@ struct BotaoPadraoView: View {
         .background(backgroundColor)
         .cornerRadius(cornerRadius)
     }
-    
 }

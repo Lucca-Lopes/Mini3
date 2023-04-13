@@ -21,11 +21,12 @@
 		DF07D73629E5FAAE0028BA0F /* VideoRega.mov in Resources */ = {isa = PBXBuildFile; fileRef = DF07D73529E5FAAE0028BA0F /* VideoRega.mov */; };
 		DF0E348B29D35F76002E6024 /* DetalheConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E348A29D35F76002E6024 /* DetalheConfigView.swift */; };
 		DF23559B29E4A129000B85CB /* NovoGirassolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF23559A29E4A129000B85CB /* NovoGirassolView.swift */; };
-		DF38251C29D4C642002F35E8 /* CardInicioCultivoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF38251B29D4C642002F35E8 /* CardInicioCultivoView.swift */; };
 		DF41F3DD29DF497400FD0FF2 /* GirassolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF41F3DC29DF497400FD0FF2 /* GirassolModel.swift */; };
 		DF41F3DF29DF4BA100FD0FF2 /* EscolhaGirassolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF41F3DE29DF4BA100FD0FF2 /* EscolhaGirassolView.swift */; };
 		DF4E6C2E29DB45B700FB3533 /* VideoSol.mov in Resources */ = {isa = PBXBuildFile; fileRef = DF4E6C2C29DB45B700FB3533 /* VideoSol.mov */; };
 		DF4E6C3029DB45DC00FB3533 /* VideoPragas.mov in Resources */ = {isa = PBXBuildFile; fileRef = DF4E6C2F29DB45DC00FB3533 /* VideoPragas.mov */; };
+		DF5CB95729E880E900224527 /* PlayerUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5CB95629E880E900224527 /* PlayerUIView.swift */; };
+		DF5CB95A29E8831600224527 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DF5CB95C29E8831600224527 /* Localizable.strings */; };
 		DF76230729D21EDD0098A069 /* UserDefaultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76230629D21EDD0098A069 /* UserDefaultsModel.swift */; };
 		DF76230A29D2219C0098A069 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76230929D2219C0098A069 /* ViewModel.swift */; };
 		DF7E515629D3B0F8001553D3 /* DetalheDiaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7E515529D3B0F8001553D3 /* DetalheDiaView.swift */; };
@@ -55,11 +56,12 @@
 		DF07D73529E5FAAE0028BA0F /* VideoRega.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = VideoRega.mov; sourceTree = "<group>"; };
 		DF0E348A29D35F76002E6024 /* DetalheConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheConfigView.swift; sourceTree = "<group>"; };
 		DF23559A29E4A129000B85CB /* NovoGirassolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovoGirassolView.swift; sourceTree = "<group>"; };
-		DF38251B29D4C642002F35E8 /* CardInicioCultivoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInicioCultivoView.swift; sourceTree = "<group>"; };
 		DF41F3DC29DF497400FD0FF2 /* GirassolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GirassolModel.swift; sourceTree = "<group>"; };
 		DF41F3DE29DF4BA100FD0FF2 /* EscolhaGirassolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscolhaGirassolView.swift; sourceTree = "<group>"; };
 		DF4E6C2C29DB45B700FB3533 /* VideoSol.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = VideoSol.mov; sourceTree = "<group>"; };
 		DF4E6C2F29DB45DC00FB3533 /* VideoPragas.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = VideoPragas.mov; sourceTree = "<group>"; };
+		DF5CB95629E880E900224527 /* PlayerUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerUIView.swift; sourceTree = "<group>"; };
+		DF5CB95B29E8831600224527 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		DF76230629D21EDD0098A069 /* UserDefaultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsModel.swift; sourceTree = "<group>"; };
 		DF76230929D2219C0098A069 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		DF7E515529D3B0F8001553D3 /* DetalheDiaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheDiaView.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		A7413F8829CE15780012CBCD = {
 			isa = PBXGroup;
 			children = (
+				DF5CB95C29E8831600224527 /* Localizable.strings */,
 				A7413F9329CE15780012CBCD /* Teste_Plantas */,
 				A7413F9229CE15780012CBCD /* Products */,
 			);
@@ -142,6 +145,7 @@
 				DF41F3DC29DF497400FD0FF2 /* GirassolModel.swift */,
 				EBFD5C5F29D22CF90013A8A2 /* DiaModel.swift */,
 				DF7E515929D3C34A001553D3 /* TarefaModel.swift */,
+				DF5CB95629E880E900224527 /* PlayerUIView.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,7 +186,6 @@
 				EBFD5C5D29D22CE10013A8A2 /* GridCellPlantaView.swift */,
 				EBFD5C6729D327260013A8A2 /* NavigationLinkPadrao.swift */,
 				A772E6D629D3CFC5006CC399 /* CardAnimationView.swift */,
-				DF38251B29D4C642002F35E8 /* CardInicioCultivoView.swift */,
 			);
 			path = ComponentesView;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = A7413F8829CE15780012CBCD;
 			productRefGroup = A7413F9229CE15780012CBCD /* Products */;
@@ -248,6 +252,7 @@
 				DF4E6C3029DB45DC00FB3533 /* VideoPragas.mov in Resources */,
 				DF07D73629E5FAAE0028BA0F /* VideoRega.mov in Resources */,
 				A7413F9C29CE15790012CBCD /* Preview Assets.xcassets in Resources */,
+				DF5CB95A29E8831600224527 /* Localizable.strings in Resources */,
 				DFE18A6B29D5026A009E4852 /* Purple Smile.ttf in Resources */,
 				A7413F9929CE15790012CBCD /* Assets.xcassets in Resources */,
 				DF4E6C2E29DB45B700FB3533 /* VideoSol.mov in Resources */,
@@ -269,13 +274,13 @@
 				DF7E515829D3B700001553D3 /* TarefaRowView.swift in Sources */,
 				DFCACD2A29D30B33007F8838 /* BotaoHome.swift in Sources */,
 				DF23559B29E4A129000B85CB /* NovoGirassolView.swift in Sources */,
-				DF38251C29D4C642002F35E8 /* CardInicioCultivoView.swift in Sources */,
 				A7413FAD29D217890012CBCD /* AprendaCuidarView.swift in Sources */,
 				DF76230729D21EDD0098A069 /* UserDefaultsModel.swift in Sources */,
 				DF41F3DF29DF4BA100FD0FF2 /* EscolhaGirassolView.swift in Sources */,
 				DF41F3DD29DF497400FD0FF2 /* GirassolModel.swift in Sources */,
 				A7413FA329CF9E230012CBCD /* SplashScreen.swift in Sources */,
 				A772E6CD29D37A31006CC399 /* BotaoConfigAprenda.swift in Sources */,
+				DF5CB95729E880E900224527 /* PlayerUIView.swift in Sources */,
 				A7413FAF29D2184D0012CBCD /* ConfigView.swift in Sources */,
 				A7413FA729D215450012CBCD /* HomeView.swift in Sources */,
 				EBFD5C6829D327260013A8A2 /* NavigationLinkPadrao.swift in Sources */,
@@ -290,6 +295,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DF5CB95C29E8831600224527 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF5CB95B29E8831600224527 /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A7413F9D29CE15790012CBCD /* Debug */ = {

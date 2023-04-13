@@ -37,6 +37,7 @@ struct HomeView: View {
                             .resizable()
                             .frame(width: screenWidth * 0.1, height: screenWidth * 0.1)
                             .padding(.trailing, 20)
+                            .accessibilityLabel(Text("Informações"))
                     })
                 }
             }
@@ -46,7 +47,9 @@ struct HomeView: View {
                     .ignoresSafeArea()
                     .frame(width: screenWidth, height: screenHeight * 1.15, alignment: .center)
             }
+            .accessibilityLabel(Text(""))
         }
+        .accessibilityLabel(Text(""))
         .navigationViewStyle(StackNavigationViewStyle())
     }
 }

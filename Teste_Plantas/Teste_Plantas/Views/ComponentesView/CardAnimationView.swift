@@ -29,7 +29,8 @@ struct CardAnimationView: View {
                 .foregroundColor(Color("corFundoBotao"))
                 .shadow(radius: 4, x: 0, y: 4)
             VStack {
-                VideoPlayer(player: videoPlayer)
+                PlayerView(player: $videoPlayer)
+                    .ignoresSafeArea()
                     .frame(height: screenHeight * 0.419)
                     .cornerRadius(25)
                     .padding(20)
@@ -47,3 +48,5 @@ struct CardAnimationView: View {
         .padding(30)
     }
 }
+
+
