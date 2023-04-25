@@ -20,7 +20,7 @@ struct DiaModel: Hashable, Codable {
     
     private func definirQuantidadeTarefas(dia: Int) -> [Bool] {
         switch dia % 7 {
-        case 1:
+        case 1, 4:
             return [false, false, false]
         default:
             return [false, false]
